@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_RubikaNewsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Tbl_News">
+          <Key>
+            <PropertyRef Name="NewsId" />
+          </Key>
+          <Property Name="NewsId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NewsTitle" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="NewsCreateDateTimeIndex" Type="bigint" Nullable="false" />
+          <Property Name="NewsDateTimeIndex" Type="bigint" Nullable="false" />
+          <Property Name="NewsLead" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="NewsBody" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="NewsPicture" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="NewsOrginalLink" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="NewsLinkCrc" Type="bigint" Nullable="false" />
+          <Property Name="SiteId" Type="int" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="NewsCreateDateTime" Type="datetime" Nullable="false" />
+          <Property Name="ViewCount" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_NewsGroups">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="GroupTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Sites">
+          <Key>
+            <PropertyRef Name="SiteId" />
+          </Key>
+          <Property Name="SiteId" Type="int" Nullable="false" />
+          <Property Name="SiteTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SiteUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="SiteType" Type="int" />
+        </EntityType>
+        <Association Name="FK_Tbl_News_Tbl_NewsGroups">
+          <End Role="Tbl_NewsGroups" Type="Self.Tbl_NewsGroups" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tbl_News" Type="Self.Tbl_News" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_NewsGroups">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="Tbl_News">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_News_Tbl_Sites">
+          <End Role="Tbl_Sites" Type="Self.Tbl_Sites" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tbl_News" Type="Self.Tbl_News" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Sites">
+              <PropertyRef Name="SiteId" />
+            </Principal>
+            <Dependent Role="Tbl_News">
+              <PropertyRef Name="SiteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_RubikaNewsModelStoreContainer">
+          <EntitySet Name="Tbl_News" EntityType="Self.Tbl_News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_NewsGroups" EntityType="Self.Tbl_NewsGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Sites" EntityType="Self.Tbl_Sites" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Tbl_News_Tbl_NewsGroups" Association="Self.FK_Tbl_News_Tbl_NewsGroups">
+            <End Role="Tbl_NewsGroups" EntitySet="Tbl_NewsGroups" />
+            <End Role="Tbl_News" EntitySet="Tbl_News" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_News_Tbl_Sites" Association="Self.FK_Tbl_News_Tbl_Sites">
+            <End Role="Tbl_Sites" EntitySet="Tbl_Sites" />
+            <End Role="Tbl_News" EntitySet="Tbl_News" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_RubikaNewsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="Tbl_News">
+          <Key>
+            <PropertyRef Name="NewsId" />
+          </Key>
+          <Property Name="NewsId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NewsTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NewsCreateDateTimeIndex" Type="Int64" Nullable="false" />
+          <Property Name="NewsDateTimeIndex" Type="Int64" Nullable="false" />
+          <Property Name="NewsLead" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NewsBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NewsPicture" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NewsOrginalLink" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NewsLinkCrc" Type="Int64" Nullable="false" />
+          <Property Name="SiteId" Type="Int32" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="NewsCreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ViewCount" Type="Int32" />
+          <NavigationProperty Name="Tbl_NewsGroups" Relationship="Self.FK_Tbl_News_Tbl_NewsGroups" FromRole="Tbl_News" ToRole="Tbl_NewsGroups" />
+          <NavigationProperty Name="Tbl_Sites" Relationship="Self.FK_Tbl_News_Tbl_Sites" FromRole="Tbl_News" ToRole="Tbl_Sites" />
+        </EntityType>
+        <EntityType Name="Tbl_NewsGroups">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="GroupTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tbl_News" Relationship="Self.FK_Tbl_News_Tbl_NewsGroups" FromRole="Tbl_NewsGroups" ToRole="Tbl_News" />
+        </EntityType>
+        <EntityType Name="Tbl_Sites">
+          <Key>
+            <PropertyRef Name="SiteId" />
+          </Key>
+          <Property Name="SiteId" Type="Int32" Nullable="false" />
+          <Property Name="SiteTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SiteUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tbl_News" Relationship="Self.FK_Tbl_News_Tbl_Sites" FromRole="Tbl_Sites" ToRole="Tbl_News" />
+          <Property Name="SiteType" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_Tbl_News_Tbl_NewsGroups">
+          <End Role="Tbl_NewsGroups" Type="Self.Tbl_NewsGroups" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tbl_News" Type="Self.Tbl_News" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_NewsGroups">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="Tbl_News">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_News_Tbl_Sites">
+          <End Role="Tbl_Sites" Type="Self.Tbl_Sites" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tbl_News" Type="Self.Tbl_News" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Sites">
+              <PropertyRef Name="SiteId" />
+            </Principal>
+            <Dependent Role="Tbl_News">
+              <PropertyRef Name="SiteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_RubikaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_News" EntityType="Self.Tbl_News" />
+          <EntitySet Name="Tbl_NewsGroups" EntityType="Self.Tbl_NewsGroups" />
+          <EntitySet Name="Tbl_Sites" EntityType="Self.Tbl_Sites" />
+          <AssociationSet Name="FK_Tbl_News_Tbl_NewsGroups" Association="Self.FK_Tbl_News_Tbl_NewsGroups">
+            <End Role="Tbl_NewsGroups" EntitySet="Tbl_NewsGroups" />
+            <End Role="Tbl_News" EntitySet="Tbl_News" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_News_Tbl_Sites" Association="Self.FK_Tbl_News_Tbl_Sites">
+            <End Role="Tbl_Sites" EntitySet="Tbl_Sites" />
+            <End Role="Tbl_News" EntitySet="Tbl_News" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_RubikaNewsModelStoreContainer" CdmEntityContainer="DB_RubikaEntities">
+          <EntitySetMapping Name="Tbl_News">
+            <EntityTypeMapping TypeName="DB_RubikaNewsModel.Tbl_News">
+              <MappingFragment StoreEntitySet="Tbl_News">
+                <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+                <ScalarProperty Name="NewsTitle" ColumnName="NewsTitle" />
+                <ScalarProperty Name="NewsCreateDateTimeIndex" ColumnName="NewsCreateDateTimeIndex" />
+                <ScalarProperty Name="NewsDateTimeIndex" ColumnName="NewsDateTimeIndex" />
+                <ScalarProperty Name="NewsLead" ColumnName="NewsLead" />
+                <ScalarProperty Name="NewsBody" ColumnName="NewsBody" />
+                <ScalarProperty Name="NewsPicture" ColumnName="NewsPicture" />
+                <ScalarProperty Name="NewsOrginalLink" ColumnName="NewsOrginalLink" />
+                <ScalarProperty Name="NewsLinkCrc" ColumnName="NewsLinkCrc" />
+                <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="NewsCreateDateTime" ColumnName="NewsCreateDateTime" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_NewsGroups">
+            <EntityTypeMapping TypeName="DB_RubikaNewsModel.Tbl_NewsGroups">
+              <MappingFragment StoreEntitySet="Tbl_NewsGroups">
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="GroupTitle" ColumnName="GroupTitle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Sites">
+            <EntityTypeMapping TypeName="DB_RubikaNewsModel.Tbl_Sites">
+              <MappingFragment StoreEntitySet="Tbl_Sites">
+                <ScalarProperty Name="SiteType" ColumnName="SiteType" />
+                <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+                <ScalarProperty Name="SiteTitle" ColumnName="SiteTitle" />
+                <ScalarProperty Name="SiteUrl" ColumnName="SiteUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,174 @@
+﻿@font-face {
+    font-family: 'BYekan';
+    src: url('fonts/BYekan.eot?#') format('eot'), /* IE6–8 */
+    url('fonts/BYekan.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('fonts/BYekan.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+    font-family: 'BMitra';
+    src: url('fonts/BMitra.eot?#') format('eot'), /* IE6–8 */
+    url('fonts/BMitra.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('fonts/BMitra.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+    font-family: 'BTitr';
+    src: url('fonts/BTitrBold.eot?#') format('eot'), /* IE6–8 */
+    url('fonts/BTitrBold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('fonts/BTitrBold.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+body {
+    background: url(../Images/bg-majles.jpg) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logo {
+    margin-left: 0 !important;
+    margin-right: 12px !important;
+    margin-bottom: 0 !important;
+    margin-top: 12px !important;
+}
+
+section .loginBox {
+    width: 350px !important;
+    height: 198px !important;
+    margin: 0 auto !important;
+    background: none no-repeat rgba(255, 255, 255, 0.64) !important;
+    margin-top: 145px !important;
+}
+
+    section .loginBox table {
+        width: 80% !important;
+        margin: 16px auto !important;
+    }
+
+#rightMenu {
+    position: fixed;
+    width: 284px;
+    top: 39px;
+    bottom: 0;
+    background-color: rgba(44, 44, 44, 0.52);
+    right: 0;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000;
+    box-shadow: inset 0 0 10px #000;
+    z-index: 1000;
+}
+
+    #rightMenu .titleSpan {
+        background-image: url('../Images/titleSpan.png');
+        font-family: 'BYekan';
+        color: #FFF;
+        font-size: 17px;
+        width: 131px;
+        margin-top: 45px;
+        right: 0;
+        display: block;
+        opacity: 0.9;
+        padding-right: 14px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    #rightMenu .navMenu {
+        width: 279px;
+        overflow: auto;
+        margin-top: 22px;
+    }
+
+        #rightMenu .navMenu ul {
+            padding: 0;
+            margin: 0;
+        }
+
+            #rightMenu .navMenu ul li {
+                list-style: none;
+                width: 100%;
+            }
+
+                #rightMenu .navMenu ul li .navItem {
+                    width: 258px;
+                    overflow: auto;
+                    padding-right: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    cursor: pointer;
+                }
+
+                    #rightMenu .navMenu ul li .navItem img, #detailContent > img {
+                        float: right;
+                        width: 74px;
+                        -moz-box-shadow: 0px 1px 15px 2px #FFF;
+                        -webkit-box-shadow: 0px 1px 15px 2px #FFF;
+                        box-shadow: 0px 1px 15px 2px #FFF;
+                        opacity: 0.8;
+                        border-radius: 5px;
+                    }
+
+                    #rightMenu .navMenu ul li .navItem .ItemTitle {
+                        float: left;
+                        font-family: 'BTitr';
+                        font-size: 20px;
+                        width: 178px;
+                        color: #F7F7F7;
+                        text-align: center;
+                    }
+
+                    #rightMenu .navMenu ul li .navItem .ItemDetail {
+                        float: left;
+                        font-family: 'BMitra';
+                        font-size: 13px;
+                        width: 178px;
+                        color: #F7F7F7;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    #rightMenu .navMenu ul li .navItem:hover {
+                        /*background-color: rgba(44, 44, 44, 0.70);*/
+                    }
+
+#leftMenu {
+    position: fixed;
+    width: 100%;
+    height: 42px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: 999;
+    right: -100%;
+}
+
+#detailContent {
+    position: relative;
+    width: 100%;
+    display: none;
+}
+
+    #detailContent .ItemImage img {
+        width: 36px;
+    }
+
+    #detailContent .ItemImage {
+        float: right;
+        width: 36px;
+        z-index: 900000;
+        position:absolute;
+    }
+
+    #detailContent .ItemTitle {
+        font-family: 'B Mitra';
+        font-size: 17px;
+        font-weight: bold;
+        color: #FFF;
+        display: block;
+        padding-right: 46px;
+        padding-top: 8px;
+        white-space: nowrap;
+        width:100%;
+  
+    }

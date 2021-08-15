@@ -1,0 +1,299 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Landing1.master.cs" Inherits="P_Art.Pages.P_Art.MasterPages.Landing1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <link type="text/css" rel="stylesheet" href="/Pages/P-Art/Styles/MainStyle.css?ver=10.11" />
+    <link type="text/css" rel="stylesheet" href="/Pages/P-Art/Styles/Landing1Style.css?ver=1.00" />
+    <link type="text/css" rel="stylesheet" href="/Pages/P-Art/Styles/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src='/Pages/P-Art/Scripts/jquery.easing.1.3.js' type="text/javascript"></script>
+    <script src='/Pages/P-Art/Scripts/AppScripts.js?ver=13.0' type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <section class="topHeader"></section>
+            <section class="bottomHeader">
+                <div class="container">
+                    <div class="brand">
+                        <h1><a href="/"><img src="/Pages/P-Art/Images/payeshlogo.png" /></a></h1>
+                    </div>
+                    <nav class="menuList">
+                        <ul>
+                            <li>
+                                <a href="/" class="enw-menuList__item">صفحه اصلی</a>
+                            </li>
+                            <li>
+                                <a href="#movie-most-visit" class="enw-menuList__item">تازه ها</a>
+                            </li>
+                            <li>
+                                <a href="#movie-archive" class="enw-menuList__item">آرشیو</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="menuTools">
+                        <li>
+                            <a href="/Movies/Latest/">
+                                <i class="fa fa-archive"></i>
+                                <span>اخبار داخلی</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Movies/Latest?type=2">
+                                <i class="fa fa-play"></i>
+                                <span>اخبار بین الملل</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="filterMovie" onclick="OpenFilter();">
+                                <i class="fa fa-filter"></i>
+                                <span>فیلتر</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+        </header>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer class="enw-footer">
+            <div class="enw-search__wrapper">
+                <div id="footer-search-autocomplete" class="js-awesomeplete-searchBar" eventisallowed="1" maxitems="10">
+                    <div class="enw-searchBar">
+                        <div class="awesomplete">
+                            <input class="awesomplete" aria-label="جستجو" placeholder="جستجو در پایش اخبار" autocomplete="off" aria-autocomplete="list" type="search"><ul hidden=""></ul>
+                            <span class="visually-hidden" role="status" aria-live="assertive" aria-relevant="additions"></span>
+                        </div>
+                        <button class="enw-searchBar__magnifier">
+                            <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#fff" fill-rule="evenodd">
+                                    <path d="M16.525 16.525A9.6 9.6 0 1 0 2.948 2.948a9.6 9.6 0 0 0 13.577 13.577zm-1.358-1.358A7.68 7.68 0 1 0 4.306 4.306a7.68 7.68 0 0 0 10.861 10.861z"></path>
+                                    <path d="M15.161 16.519l1.358-1.358 6.541 6.541-1.358 1.358-6.54-6.541z"></path>
+                                    <path d="M23.156 23.156A.96.96 0 1 0 21.8 21.8a.96.96 0 0 0 1.357 1.357z"></path>
+                                </g></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns enw-block-tags">
+                        <div class="enw-searchBar__bytags text-center">
+                            <h3 class="small enw-searchBar__bytags__title">
+                                <svg class="tag-icon" width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.862 2.906c0 .676.556 1.238 1.23 1.242a1.231 1.231 0 0 0 1.235-1.23 1.248 1.248 0 0 0-1.23-1.24 1.225 1.225 0 0 0-1.235 1.228zM14.437.104l3.437.113c.528.017.898.376.915.9.068 2.188.124 4.375.208 6.56.03.765-.23 1.373-.765 1.907-3.012 2.998-6.013 6.007-9.018 9.01-.547.548-.962.548-1.51 0L.387 11.276c-.516-.516-.516-.94 0-1.457C3.41 6.796 6.438 3.78 9.45.75c.532-.535 1.142-.78 1.89-.747 1.032.046 2.065.07 3.097.102z" fill="#FFF" fill-rule="evenodd"></path></svg>
+                                برچسب های مفید
+                            </h3>
+                            <ul class="list-inline enw-listTags">
+                                <li><a href="#" class="enw-listTags__tags">وزارت نیرو</a></li>
+                                <li><a href="#" class="enw-listTags__tags">شهرداری تهران</a></li>
+                                <li><a href="#" class="enw-listTags__tags">وزارت کار</a></li>
+                                <li><a href="#" class="enw-listTags__tags">وزارت صنعت</a></li>
+                                <li><a href="#" class="enw-listTags__tags">وزارت علوم</a></li>
+                                <li><a href="#" class="enw-listTags__tags">بورس کالا</a></li>
+                                <li><a href="#" class="enw-listTags__tags">بانک مرکزی</a></li>
+                                <li><a href="#" class="enw-listTags__tags">ایران</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="enw-footer__sitemap">
+                <div class="row">
+                    <div class="small-12 columns enw-footer__logo">
+                        <a href="#">پایش مدیا
+                        </a>
+                    </div>
+                </div>
+                <ul class="list-inline text-center enw-footer__shareList">
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <path class="social-button__circle" fill="#3a589e" d="M32.007 16c0 8.837-7.165 16-16.003 16S0 24.837 0 16 7.167 0 16.005 0s16.003 7.163 16.003 16z"></path><path class="social-button__inner" fill="#fff" d="M17.673 23.98h-3.02v-8.065h-2.02V13.13h2.02l-.01-1.635c0-2.27.617-3.65 3.292-3.65h2.224v2.78h-1.394c-1.04 0-1.09.393-1.09 1.113l-.004 1.392h2.504l-.295 2.778-2.202.006-.005 8.064z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+                                <path class="social-button__circle" fill="#5ca7dc" d="M32.438 16c0 8.837-7.165 16-16.003 16S.432 24.837.432 16 7.597 0 16.435 0s16.003 7.163 16.003 16z"></path><path class="social-button__inner" fill="#fff" d="M24.15 11.068c-.59.26-1.233.44-1.904.522a3.333 3.333 0 0 0 1.46-1.83 6.699 6.699 0 0 1-2.105.8 3.31 3.31 0 0 0-5.724 2.268c0 .256.03.51.084.75a9.398 9.398 0 0 1-6.823-3.457 3.282 3.282 0 0 0-.452 1.665c0 1.148.586 2.158 1.475 2.758a3.34 3.34 0 0 1-1.496-.415v.04c0 1.6 1.137 2.94 2.656 3.247a3.354 3.354 0 0 1-1.499.057 3.317 3.317 0 0 0 3.096 2.297 6.657 6.657 0 0 1-4.904 1.369 9.395 9.395 0 0 0 5.077 1.486c6.09 0 9.418-5.044 9.418-9.42 0-.14-.002-.283-.01-.427a6.708 6.708 0 0 0 1.653-1.712z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg class="google-plus" xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+                                <path class="social-button__circle" fill="#df4634" d="M32.71 16c0 8.837-7.166 16-16.004 16S.703 24.837.703 16 7.868 0 16.706 0 32.71 7.163 32.71 16z"></path><path class="social-button__inner" fill="#fff" d="M17.352 12.69l-1.425 1.436c-.032-.024-.072-.047-.107-.075-1.68-1.36-4.21-.404-4.586 1.736-.288 1.64.737 3.137 2.36 3.446 1.067.203 2.233-.245 2.75-1.082.146-.235.236-.504.374-.808h-2.662v-1.994c.088-.003.18-.013.273-.013 1.35 0 2.7.005 4.05-.006.23-.003.32.052.35.292.174 1.417-.045 2.742-.918 3.904-.79 1.05-1.886 1.562-3.17 1.713-2.316.27-4.53-1.136-5.26-3.34a4.909 4.909 0 0 1 3.87-6.414c1.476-.247 2.8.115 3.953 1.08l.147.122zm4.293 2.784V13.75c.4 0 .77-.01 1.138.01.046 0 .122.13.123.2.01.493.005.986.005 1.503h1.696v1.257h-1.693v1.703h-1.247v-1.695h-.66c-.298 0-.597.008-.897-.005-.062-.004-.17-.083-.172-.13-.014-.362-.008-.726-.008-1.118h1.715z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+                                <path class="social-button__circle" fill="#e02418" d="M32.68 16c0 8.837-7.166 16-16.004 16S.673 24.837.673 16 7.838 0 16.676 0 32.68 7.163 32.68 16z"></path><path class="social-button__inner" fill="#fefefe" d="M19.57 16.53l-4.93-2.573v5.128l4.93-2.556zm-2.396 6.62h-1.02c-.023-.004-.046-.01-.07-.012-.422-.007-.845-.01-1.268-.02-.57-.01-1.138-.017-1.707-.036-.835-.027-1.67-.05-2.5-.102a7.35 7.35 0 0 1-1.227-.18c-.632-.148-1.127-.503-1.418-1.102a4.398 4.398 0 0 1-.41-1.445 23.063 23.063 0 0 1-.164-2.45c-.006-.794-.013-1.588.008-2.38.016-.62.075-1.237.117-1.855a5.8 5.8 0 0 1 .285-1.44c.224-.677.65-1.163 1.308-1.44.354-.15.73-.196 1.108-.216.89-.048 1.78-.088 2.67-.124.51-.02 1.024-.028 1.536-.037.53-.008 1.06-.018 1.59-.016.91.003 1.82.014 2.728.026.506.007 1.013.018 1.52.036.755.027 1.51.056 2.267.097.326.018.656.044.975.108.656.132 1.18.475 1.516 1.065.252.442.397.93.45 1.43.082.762.15 1.526.175 2.29.03.884.023 1.77.003 2.656-.015.64-.075 1.28-.12 1.918-.033.474-.13.936-.28 1.388-.273.815-.818 1.343-1.65 1.543-.356.084-.73.11-1.098.13-.82.048-1.642.084-2.464.11-.783.024-1.567.03-2.35.044-.17.003-.34.01-.51.017z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+                                <path class="social-button__circle" fill="#0074b6" d="M32.365 16c0 8.837-7.163 16-16 16S.368 24.837.368 16c0-8.835 7.163-15.998 16-15.998s15.998 7.163 15.998 16z"></path><path class="social-button__" fill="#fefefe" d="M14.79 17.712c0-1.524.002-3.048 0-4.572 0-.115.024-.155.147-.154.84.005 1.68.005 2.52 0 .116 0 .147.034.144.147-.006.35-.002.7 0 1.052 0 .032-.018.078.026.09s.052-.037.07-.065c.507-.82 1.26-1.272 2.197-1.407.774-.11 1.54-.042 2.267.266.74.312 1.2.882 1.47 1.625a5.6 5.6 0 0 1 .31 1.68c.07 1.7.017 3.4.032 5.103.002.286-.003.572.002.857 0 .085-.025.11-.11.11-.91-.003-1.82-.004-2.728 0-.114.002-.11-.055-.11-.135v-4.663c0-.468-.016-.936-.17-1.385-.196-.582-.6-.892-1.214-.924-.47-.024-.92.036-1.293.356-.342.292-.48.69-.56 1.114-.06.312-.076.627-.076.943 0 1.516-.002 3.032.002 4.547 0 .123-.037.15-.152.15-.875-.005-1.75-.005-2.624 0-.116 0-.152-.028-.152-.15.004-1.528.003-3.057.003-4.585zm-4.785-.01c0-1.52 0-3.038-.003-4.557 0-.124.03-.16.156-.16.874.007 1.75.006 2.623.002.115 0 .155.024.154.148-.004 3.055-.004 6.11 0 9.166 0 .114-.026.147-.142.146-.883-.005-1.766-.005-2.65 0-.12 0-.14-.04-.14-.148.003-1.532.002-3.064.002-4.596zm3.181-7.706c-.008.94-.792 1.715-1.724 1.7a1.706 1.706 0 0 1-1.69-1.716c.01-.945.774-1.707 1.706-1.7.943.006 1.716.783 1.71 1.716z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg class="vkontakte-icon" xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+                                <path class="social-button__circle" fill="#4b75a6" d="M32.207 16c0 8.837-7.163 16-16 16S.21 24.837.21 16C.21 7.166 7.37.003 16.207.003s16 7.163 16 16z"></path><path class="social-button__inner" fill="#fefefe" d="M7.23 11.06c.48 0 .957-.004 1.435 0 .396.005.73.208.88.58.282.71.605 1.4.978 2.066.38.68.78 1.35 1.257 1.968.154.2.32.39.523.545a.78.78 0 0 0 .31.154.388.388 0 0 0 .407-.145c.128-.163.18-.36.22-.556.106-.497.122-1.002.12-1.507 0-.462-.01-.923-.052-1.383a3.122 3.122 0 0 0-.123-.605c-.12-.39-.397-.603-.768-.718-.093-.03-.19-.05-.285-.065-.08-.012-.097-.042-.07-.117s.08-.136.132-.195c.228-.256.53-.37.854-.438.272-.056.547-.082.824-.095a20.91 20.91 0 0 1 1.857 0c.328.013.652.06.97.146.366.1.57.337.636.705.052.293.052.59.042.885-.016.502-.042 1.004-.05 1.507-.004.372-.016.744-.02 1.116 0 .316.004.63.095.937.048.16.124.306.252.42.115.103.24.114.378.055s.252-.148.36-.25c.365-.342.65-.75.928-1.16a16.881 16.881 0 0 0 1.733-3.35c.035-.088.084-.17.142-.245.12-.158.28-.22.476-.22.593 0 1.185-.006 1.778-.01.467 0 .935.002 1.402-.007.206-.004.412-.024.618.006a.95.95 0 0 1 .384.125c.108.07.165.17.176.297.016.2-.036.388-.105.572-.168.443-.41.85-.665 1.247-.512.8-1.098 1.544-1.675 2.296-.265.345-.538.683-.764 1.055a2.57 2.57 0 0 0-.126.238c-.143.297-.11.577.083.843.208.285.467.52.723.76.68.63 1.348 1.27 1.918 2.005.2.258.378.53.52.824a.802.802 0 0 1 .096.407c-.012.23-.144.38-.337.485-.206.11-.43.17-.663.174-.885.014-1.772-.002-2.656.044-.76.04-1.35-.267-1.88-.757-.38-.35-.702-.75-1.044-1.132-.214-.238-.428-.476-.684-.673a1.533 1.533 0 0 0-.212-.137c-.29-.155-.572-.098-.785.16-.176.214-.26.468-.323.73-.08.338-.094.683-.112 1.027-.023.43-.21.636-.636.72a.827.827 0 0 1-.178.018H15.27a6.16 6.16 0 0 1-1.833-.3 7.597 7.597 0 0 1-2.7-1.517c-.573-.493-1.064-1.062-1.524-1.66-.747-.97-1.398-2.003-2.003-3.066a44.588 44.588 0 0 1-1.997-3.96 1.117 1.117 0 0 1-.096-.35c-.018-.182.046-.303.214-.38.16-.073.327-.1.5-.1.467-.002.934 0 1.402 0v-.024z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <path class="social-button__circle" fill="#2e62ac" d="M32.048 16c0 8.837-7.163 16-16 16S.05 24.837.05 16C.05 7.166 7.213.003 16.05.003s15.998 7.163 15.998 16z"></path><path class="social-button__inner" fill="#fefefe" d="M12.913 17.85c.004 1.41 1.11 2.452 2.6 2.448 1.3-.004 2.343-1.085 2.338-2.426-.005-1.418-1.083-2.514-2.46-2.503s-2.48 1.114-2.476 2.48zm4.915 3.94c-.39.363-.77.676-1.235.84-1.766.627-3.403.398-4.85-.825-2.676-2.262-2.407-6.77 1.1-8.557 1.157-.59 2.385-.658 3.617-.19.498.19.898.52 1.243.935.053-.06.03-.13.03-.188.003-1.31.004-2.622 0-3.933 0-.136.028-.198.176-.227.88-.172 1.76-.354 2.638-.54.12-.025.143.002.142.12-.003 4.51-.003 9.02 0 13.528 0 .127-.038.152-.157.15-.85-.004-1.7-.005-2.55.002-.14 0-.163-.048-.16-.17.008-.3.003-.6.003-.944z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <svg class="bottom-instagram" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 112.196 112.196">
+                                <circle class="social-button__circle" cx="56.098" cy="56.097" r="56.098" fill="#6a453b"></circle><path class="social-button__inner" d="M79.124 22.506h-46.05c-5.83 0-10.56 4.73-10.56 10.57v46.05c0 5.83 4.73 10.56 10.56 10.56h46.05c5.83 0 10.56-4.73 10.56-10.56v-46.05c0-5.84-4.73-10.57-10.56-10.57zm-7.141 7.77l8.44-.02h.02c.81-.01 1.47.65 1.47 1.45v8.47c0 .81-.65 1.46-1.46 1.46l-8.43.03c-.81 0-1.46-.65-1.46-1.45l-.03-8.47c-.01-.81.64-1.46 1.45-1.47zm-26.179 20.05c.22-.38.45-.76.71-1.12 2.15-2.98 5.64-4.93 9.58-4.93 3.95 0 7.44 1.95 9.59 4.93.26.36.49.74.71 1.13.96 1.7 1.53 3.67 1.53 5.76 0 6.52-5.31 11.82-11.83 11.82-6.52 0-11.82-5.3-11.82-11.82-.001-2.09.56-4.06 1.53-5.77zm37.34 26.38c0 3.55-2.89 6.44-6.44 6.44h-41.21c-3.55 0-6.44-2.89-6.44-6.44v-27.5h10.03c-.25.61-.47 1.25-.65 1.89-.46 1.59-.7 3.27-.7 5 0 10.13 8.24 18.37 18.36 18.37 10.13 0 18.37-8.24 18.37-18.37 0-1.73-.25-3.41-.7-5-.19-.64-.4-1.28-.65-1.89h10.03v27.5z" fill="#fff"></path></svg>
+                        </a>
+                    </li>
+                    <li><a href="#"><span class="icon"></span></a></li>
+                </ul>
+                <div class="row" style="display:none">
+                    <div class="small-12 medium-2 columns">
+                    </div>
+                    <div class="small-12 medium-2 columns test">
+                        <ul class="list-unstyled enw-footer__sitemap__cat" data-accordion-menu="co9o5e-accordion-menu" role="tablist" aria-multiselectable="true">
+                            <li role="tab" class="" aria-haspopup="true" aria-expanded="false" aria-label="Channels"
+                                aria-controls="791vol-acc-menu" id="kgt82m-acc-menu-link">
+                                <a class="enw-footer__list-heading js-footer-list-heading" href="#" tabindex="0">شبکه ها
+                                </a>
+                                <ul class="menu vertical nested" aria-hidden="true" role="tabpanel" style="" aria-labelledby="kgt82m-acc-menu-link" id="791vol-acc-menu">
+                                    <li role="menuitem" class="">
+                                        <a href="#">شبکه 1
+                                        </a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">شبکه 2
+                                        </a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">شبکه 3
+                                        </a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">شبکه خبر
+                                        </a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">شبکه 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-12 medium-2 columns">
+                        <ul class="list-unstyled enw-footer__sitemap__cat" data-accordion-menu="zgn6vj-accordion-menu" role="tablist" aria-multiselectable="true">
+                            <li role="tab" class="" aria-haspopup="true" aria-expanded="false" aria-label="Topics"
+                                aria-controls="e3g7sg-acc-menu" id="nm1sow-acc-menu-link">
+                                <a class="enw-footer__list-heading js-footer-list-heading" href="#" tabindex="0">دسته بندی ها
+                                </a>
+                                <ul class="menu vertical nested" aria-hidden="true" role="tabpanel" style="" aria-labelledby="nm1sow-acc-menu-link" id="e3g7sg-acc-menu">
+                                    <li role="menuitem" class="">
+                                        <a href="#">سیاسی</a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">اقتصادی</a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">ورزشی</a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">اجتماعی</a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">فرهنگی</a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">فناوری</a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">بورس</a>
+                                    </li>
+                                    <li role="menuitem" class="">
+                                        <a href="#">خودرو</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-12 medium-2 columns">
+                        <ul class="list-unstyled enw-footer__sitemap__cat" data-accordion-menu="11ctwg-accordion-menu" role="tablist" aria-multiselectable="true">
+                            <li role="tab" class="" aria-haspopup="true" aria-expanded="false" aria-label="Services"
+                                aria-controls="0bxvts-acc-menu" id="9x5kf9-acc-menu-link">
+                                <a class="enw-footer__list-heading js-footer-list-heading" href="#" tabindex="0">خدمات
+                                </a>
+                                <ul class="menu vertical nested" aria-hidden="true" role="tabpanel" style="" aria-labelledby="9x5kf9-acc-menu-link" id="0bxvts-acc-menu">
+                                    <li role="menuitem" class=""><a href="#">پخش زنده</a></li>
+                                    <li role="menuitem" class=""><a href="#">بولتن</a></li>
+                                    <li role="menuitem" class=""><a href="#">هواشناسی</a></li>
+                                    <li role="menuitem" class=""><a href="#">سکه و ارز</a></li>
+                                    <li role="menuitem" class=""><a href="#">صفحه اول روزنامه ها</a></li>
+                                    <li role="menuitem" class=""><a href="#">ویدیوها</a></li>
+                                    <li role="menuitem" class="">
+                                        <a onclick="window.open(this.href); return false;" href="#">پایش سیما</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-12 medium-2 columns">
+                        <ul class="list-unstyled enw-footer__sitemap__cat" data-accordion-menu="ism9rt-accordion-menu" role="tablist" aria-multiselectable="true">
+                            <li role="tab" class="" aria-haspopup="true" aria-expanded="false" aria-label="Corporate "
+                                aria-controls="ef9ohv-acc-menu" id="8717nj-acc-menu-link">
+                                <a class="enw-footer__list-heading js-footer-list-heading" href="#" tabindex="0">شرکت پایش مدیا
+                                </a>
+                                <ul class="menu vertical nested" aria-hidden="true" role="tabpanel" style="" aria-labelledby="8717nj-acc-menu-link" id="ef9ohv-acc-menu">
+                                    <li role="menuitem" class=""><a href="#">درباره پایش مدیا</a></li>
+                                    <li role="menuitem" class=""><a href="#">محصولات</a>
+                                    </li>
+                                    <li role="menuitem" class=""><a href="#">خدمات</a>
+                                    </li>
+                                    <li role="menuitem" class=""><a href="#">پشتیبانی</a>
+                                    </li>
+                                    <li role="menuitem" class=""><a href="#">ارتباط با ما</a></li>
+                                    <li role="menuitem" class=""><a href="#">فرصت شغلی</a>
+                                    </li>
+                                    <li role="menuitem" class=""><a href="#">تبلیغات</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-12 columns">
+                        <div class="text-center enw-footer__copyright">Copyright © payesh 2017 </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function OpenFilter() {
+                $('#divMovieFilter').slideToggle();
+            }
+        </script>
+
+    </form>
+</body>
+</html>

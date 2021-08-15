@@ -1,0 +1,627 @@
+﻿
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-Bold-web.eot');
+    src: url('/Styles/fonts/IRANSans-Bold-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-Bold-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-Bold-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-Bold-web.ttf') format('ttf');
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-Medium-web.eot');
+    src: url('/Styles/fonts/IRANSans-Medium-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-Medium-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-Medium-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-Medium-web.ttf') format('ttf');
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-UltraLight-web.eot');
+    src: url('/Styles/fonts/IRANSans-UltraLight-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-UltraLight-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-UltraLight-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-UltraLight-web.ttf') format('ttf');
+    font-weight: 200;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-Light-web.eot');
+    src: url('/Styles/fonts/IRANSans-Light-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-Light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-Light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-Light-web.ttf') format('ttf');
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-web.eot');
+    src: url('/Styles/fonts/IRANSans-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-web.ttf') format('ttf');
+    font-weight: normal;
+}
+/* CSS Mobile Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "IranSans",tahoma, arial;
+    line-height: 1.5;
+    font-size: 16px;
+    background: #fff;
+    padding: 5px;
+    color: #000;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: none;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p img {
+    float: left;
+    margin: 0 10px 5px 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/**
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+    /**
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+    }
+
+
+
+
+
+
+
+
+.fixed-table-of-content.appear {
+    opacity: 1;
+}
+
+::selection {
+    background: #BA201D;
+    text-shadow: none;
+}
+
+.fixed-table-of-content {
+    opacity: 0;
+    position: fixed;
+    left: -300px;
+    top: 2%;
+    /*width:95%;*/
+    width: 300px;
+    z-index: 400;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+    .fixed-table-of-content:hover, .fixed-table-of-content.reveal {
+        left: 0;
+    }
+
+    .fixed-table-of-content em {
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 1px 0 #000;
+        background: #BA201D;
+        padding: 5px 10px;
+        width: 92px;
+        font-style: normal;
+        font-size: 22px;
+        display: block;
+        position: absolute;
+        z-index: 490;
+        right: -92px;
+        -webkit-transition: all 0.3s;
+        -webkit-transition-delay: 0.2s;
+        -moz-transition: all 0.3s 0.2s;
+        -o-transition: all 0.3s 0.2s;
+        transition: all 0.3s 0.2s;
+        box-sizing: border-box;
+    }
+
+    .fixed-table-of-content:hover em, .fixed-table-of-content.reveal em {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: left top;
+        -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+        -o-transform-origin: left top;
+        transform-origin: left top;
+    }
+
+    .fixed-table-of-content em i {
+        position: relative;
+        right: -.3em;
+        bottom: -.2em;
+    }
+
+    .fixed-table-of-content div {
+        margin: 0;
+        padding: 5px;
+        background: #eee;
+        position: relative;
+        max-height: 550px;
+        overflow: auto;
+        z-index: 500;
+        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .fixed-table-of-content h5 {
+        text-align: right;
+        font-size: 16px;
+        font-weight: bold;
+        /* line-height: 10px; */
+        margin: 10px;
+        position: relative;
+        padding-right: 20px;
+        cursor: pointer;
+        padding: 10px 10px;
+        background: #1965B7;
+        color: #fff;
+    }
+
+        .fixed-table-of-content h5 .uncollapse {
+            color: #111;
+            background: #c0c5cb;
+        }
+
+        .fixed-table-of-content h5:before {
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            content: " - ";
+        }
+
+        .fixed-table-of-content h5.uncollapse:before {
+            content: " + ";
+        }
+
+    .fixed-table-of-content ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+
+
+
+        .fixed-table-of-content ul li {
+        }
+
+        .fixed-table-of-content ul a {
+            display: block;
+            padding: 2px 10px;
+            margin-bottom: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #013568;
+            text-decoration: none;
+            text-align: right;
+        }
+
+            .fixed-table-of-content ul a i {
+                font: normal 12px arial;
+            }
+
+            .fixed-table-of-content ul a:hover, .fixed-table-of-content ul a.active:hover {
+                background: #BA201D;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .fixed-table-of-content ul a.active {
+                color: #BA201D;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.home {
+    font-size: 26px;
+}
+
+    .home h2 {
+    }
+
+    .home h4 {
+    }
+
+    .home h5 {
+    }
+
+.logo {
+}
+
+    .logo a {
+    }
+
+        .logo a img {
+            max-width: 128px;
+            width: 100%;
+        }
+
+.bultanList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+    .bultanList ul {
+        list-style: none;
+    }
+
+        .bultanList ul li {
+            margin-bottom: 10px;
+        }
+
+            .bultanList ul li a {
+                padding: 20px 5px;
+                background: #eee;
+                display: block;
+                border-radius: 2px;
+                border: 1px solid #ccc;
+                text-decoration: none;
+                color: #111;
+                -moz-transition: all .3s ease-in;
+                -o-transition: all .3s ease-in;
+                -webkit-transition: all .3s ease-in;
+                transition: all .3s ease-in;
+            }
+
+                .bultanList ul li a:hover {
+                    border: 1px solid #999;
+                    background: #fcfcfc;
+                }
+
+.nimtaContainer {
+}
+
+    .nimtaContainer .nimtaItem {
+        width: 90%;
+        background: #fefefe;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        margin: 0 auto;
+        text-align: right;
+        direction: rtl;
+        margin-bottom: 10px;
+        padding: 15px 15px 20px 15px;
+    }
+
+        .nimtaContainer .nimtaItem a {
+            display: block;
+            position: relative;
+            max-width: 100%;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .nimtaContainer .nimtaItem a i {
+                position: absolute;
+                font-size: 12px;
+                width: 100%;
+                bottom: -18px;
+                left: 0;
+                color: #f00;
+                font-style: normal;
+                text-shadow: 1px 1px 8px #666;
+                text-align: center;
+            }
+
+            .nimtaContainer .nimtaItem a img {
+                text-align: center;
+                max-width: 90%;
+                margin: 0 auto;
+                display: block;
+                min-height: 40px;
+            }
+
+            .nimtaContainer .nimtaItem a span {
+                position: absolute;
+                width: 100%;
+                height: 60px;
+                margin: 0 auto;
+                background: rgba(0, 0, 0,0.7);
+                color: #fff;
+                text-align: center;
+                top: 0;
+                left: 0;
+                font-size: 30px;
+                display: none;
+            }
+
+.newsContainer {
+}
+
+    .newsContainer .newsItem {
+        width: 90%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 15px;
+        background: #fefefe;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        margin: 0 auto;
+        text-align: right;
+        direction: rtl;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .newsContainer .GroupName, .newsContainer .KeywordName {
+        display: none;
+    }
+
+    .newsContainer .siteTitle {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: #29CE55;
+        padding: 3px 8px;
+        color: #fff;
+        font-size: 15px;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    .newsContainer .newsTime {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background: #29CE55;
+        padding: 3px 8px;
+        color: #fff;
+        font-size: 15px;
+        min-width: 90px;
+        text-align: center;
+    }
+
+    .newsContainer .newsTitle {
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+        .newsContainer .newsTitle a {
+            color: #eb182b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+            .newsContainer .newsTitle a:hover {
+                border-bottom: 1px solid #eb182b;
+            }
+
+    .newsContainer .newsPicture {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+        .newsContainer .newsPicture a {
+            display: block;
+            position: relative;
+        }
+
+
+            .newsContainer .newsPicture a img {
+                max-width: 90%;
+                min-height: 40px;
+                margin: 10px 0;
+            }
+
+    .newsContainer .newsLead {
+        padding: 20px;
+        margin: 0px 0 10px 0;
+        background: #eee;
+        border-radius: 2px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .newsContainer .newsBody {
+        text-align: justify;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 28px;
+        color: #111;
+    }
+
+.lazy {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.newsLink {
+    text-align: center;
+    margin: 10px auto;
+}
+
+    .newsLink a {
+        display: inline-block;
+        background: #16a4a0;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        padding: 5px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0,0.7);
+}
+
+.loading {
+    width: 200px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    direction: rtl;
+    margin-left: -100px;
+    margin-top: -50px;
+}
+
+    .loading a {
+        padding: 15px;
+        display: block;
+    }
+
+.home2 {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.shadowMenu {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0,0.4);
+}
+
+span.highlight {
+    padding: 0 .3em;
+    color: #111;
+    background-color: #f2e712;
+    cursor: pointer;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    -oz-border-radius: .5em;
+}
+
+.videoContainer {
+}
+
+.videoSliderItem {
+    margin-top: 80px;
+}
+
+.videoPlayer {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+    .videoPlayer img.videoPic {
+        width: 80%;
+        border-radius: 4px;
+    }
+
+    .videoPlayer img.play {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        width: 30%;
+    }
+
+.videoSliderItem h6 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    width: 80%;
+    line-height: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #111;direction: rtl;
+}

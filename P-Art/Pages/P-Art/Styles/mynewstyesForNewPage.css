@@ -1,0 +1,72 @@
+﻿.mytopbarfornavigat {
+    margin-top:40px;
+    width: 87vw;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    margin-right: 5px;
+}
+
+
+.mytopbarfornavigat-right {
+    width: 60%;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius:5px;
+}
+
+.aaaa {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #EEEEEE;
+    height: 53px;
+    width: 59px;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 0 5px 0 5px;
+}
+
+.mytopbarfornavigat-right-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 17px;
+}
+
+.FiterIcons {
+    width: 23px;
+    height: 23px;
+}
+
+.myboxlable {
+    font-size: 11px;
+}
+
+.mytopbarfornavigat-right-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+.mytopbarfornavigat-right-bottom-btn {
+    width: 45%;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4px;
+}
+
+
+
+
+.mytopbarfornavigat-left{
+    background-color:#FFFFFF;
+    
+}

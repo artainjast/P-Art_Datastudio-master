@@ -1,0 +1,972 @@
+﻿@import url('fonts/IRANSans4/css/fontiran.css');
+@import url('fonts/BTrafficBold/fonts.css');
+@import url('FontAwesome/web-fonts-with-css/css/fontawesome-all.min.css');
+
+
+.PanelContentArea {
+    clear: both;
+}
+
+
+#FilterBox {
+    display: none;
+}
+
+.page-layout {
+    background: #FFF;
+    border: 1px solid rgba(0,0,0,.0625);
+    margin: 15px;
+    padding: 15px;
+    width: calc(100% - 60px);
+    overflow: hidden;
+}
+
+.important-media {
+    margin-top: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,.0625);
+    height: 230px;
+    width: 100%;
+    display: block;
+}
+
+.media-pic {
+    color: #FFF;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 0px solid #000000;
+    width: 200px;
+    height: 214px;
+    text-align: center;
+    display: inline-block;
+    right: 0;
+    margin: 0;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    float: right;
+}
+
+    .media-pic img {
+        width: 60px;
+        height: 60px;
+        margin: 15%;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .media-pic.newspaper {
+        background: #14a1bd !important;
+    }
+
+    .media-pic.news {
+        background: #ff823f !important;
+    }
+
+    .media-pic.negative-news {
+        background: #E1013F !important;
+    }
+
+    .media-pic.posetive-news {
+        background: #00B8BA !important;
+    }
+
+    .media-pic.telegram {
+        background: #0099ff !important;
+    }
+
+    .media-pic.twitter {
+        background: #00ccff !important;
+    }
+
+    .media-pic .root {
+        font-weight: 300 !important;
+        font-size: 1.3em;
+    }
+
+    .media-pic .sub {
+        font-size: 1.7em;
+    }
+
+.calculate {
+    line-height: 2em;
+    background: #EEE;
+    padding: 2px;
+    font-size: .8em;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-top: 1.3em;
+    margin-right: 4px;
+    top: 0;
+}
+
+.calRelease {
+    margin-right: 3px;
+}
+
+.media-titles {
+    width: calc(100% - 395px);
+    background: #f2f2f2;
+    right: 0;
+    line-height: 2em;
+    margin-right: 10px;
+    height: 195px !important;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    border-radius: 0px 20px 20px 0px !important;
+    -moz-border-radius: 0px 20px 20px 0px !important;
+    -webkit-border-radius: 0px 20px 20px 0px !important;
+    border: 0 solid #000000 !important;
+    overflow: hidden;
+    margin-right: 10px;
+    padding: 20px 20px 0 10px;
+    clear: both;
+}
+
+.newspaper-media .media-titles {
+    border-left: 10px solid #14a0c1 !important;
+    min-height: 195px;
+}
+
+.media-analyze {
+    clear: none;
+    float: left;
+    width: 120px;
+    height: 200px;
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    left: 0;
+    top: 0;
+}
+
+.newspaper-media .media-titles li::before {
+    font-family: 'Font Awesome\ 5 Free' !important;
+    content: "\f1ea" !important;
+    color: #14a0c1;
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2px;
+    font-size: 1em;
+}
+
+.news-media .media-titles li::before {
+    font-family: 'Font Awesome\ 5 Free' !important;
+    content: "\f09e";
+    color: #ff823f;
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2px;
+    font-size: 1em;
+}
+
+.twitter-media .media-titles li::before {
+    font-family: 'Font Awesome\ 5 Brands';
+    content: "\f099" !important;
+    color: #00ccff;
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2px;
+    font-size: 1em;
+}
+
+.telegram-media .media-titles li::before {
+    font-family: 'Font Awesome\ 5 Brands' !important;
+    content: "\f3fe" !important;
+    color: #0099ff;
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2px;
+    font-size: 1em;
+}
+
+.newspaper-media .media-titles li {
+    font-size: 13px;
+}
+
+.news-media .media-titles li {
+    font-size: 13px;
+}
+
+.telegram-media .media-titles li {
+    font-size: 13px;
+}
+
+.twitter-media .media-titles li {
+    font-size: 13px;
+}
+
+.news-media .media-titles {
+    border-left: 10px solid #ff823f !important;
+    min-height: 195px;
+}
+
+.telegram-media .media-titles {
+    border-left: 10px solid #0099ff !important;
+    min-height: 195px;
+}
+
+.twitter-media .media-titles {
+    border-left: 10px solid #00ccff !important;
+    min-height: 195px;
+}
+
+.canvasjs-chart-container {
+    text-align: right !important;
+}
+
+.divAllMediaHighSource {
+    background: #f2f2f2;
+    display: block;
+    min-height: 42px;
+}
+
+.highSource-title {
+    float: right;
+    width: 12.5vw;
+    clear: none;
+    margin-top: 120px;
+    display: inline-block;
+}
+
+    .highSource-title h4 {
+        font-size: 2.1vw !important;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+#divNewsOrientationChart .highSource-title {
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.highSource-chart {
+    font-family: Conv_BTrafficBold !important;
+    display: inline-block;
+    clear: both;
+}
+
+.highSourceTotal {
+    float: left;
+    width: 15vw;
+    clear: none;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+    .highSourceTotal span {
+        font-size: 6.5vw;
+        background: #389AD7;
+        padding: 0 10px;
+        line-height: 215px;
+        color: #FFF;
+        border-radius: 5px;
+    }
+
+.divNewsHighSource {
+    text-align: center;
+    padding: 50px;
+    height: 170px;
+    border-bottom: 1px solid #EEE;
+}
+
+    .divNewsHighSource .source-title {
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .divNewsHighSource .source-tile {
+        display: inline-block;
+        clear: none;
+        width: calc(calc(100% / 10) - 32px);
+        /*min-width: 60px;*/
+        border-radius: 5px;
+        height: 100px;
+        text-align: center;
+        margin: .7vw;
+    }
+
+        .divNewsHighSource .source-tile.news {
+            background: #ff823f;
+        }
+
+        .divNewsHighSource .source-tile .SourceTitle {
+        }
+
+            .divNewsHighSource .source-tile .SourceTitle span {
+                padding: 10px 3px;
+                font-size: 1vw;
+                position: relative;
+                height: 80px;
+                display: block;
+                overflow: hidden;
+            }
+
+            .divNewsHighSource .source-tile .SourceTitle .SourceCount {
+                background: #EEE;
+                border-radius: 70px;
+                height: 70px;
+                bottom: 35px;
+                position: relative;
+            }
+
+                .divNewsHighSource .source-tile .SourceTitle .SourceCount span {
+                    font-size: 1.6vw;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+.divNewspaperHighSource {
+    padding: 50px;
+    height: 170px;
+    border-bottom: 1px solid #EEE;
+    text-align: center;
+}
+
+    .divNewspaperHighSource .source-title {
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .divNewspaperHighSource .source-tile {
+        display: inline-block;
+        clear: none;
+        width: calc(calc(100% / 10) - 32px);
+        /*min-width: 60px;*/
+        border-radius: 5px;
+        height: 100px;
+        text-align: center;
+        margin: .7vw;
+    }
+
+        .divNewspaperHighSource .source-tile.newspaper {
+            background: #14a0c1;
+        }
+
+        .divNewspaperHighSource .source-tile .SourceTitle {
+        }
+
+            .divNewspaperHighSource .source-tile .SourceTitle span {
+                padding: 10px 3px;
+                font-size: 1vw;
+                position: relative;
+                height: 80px;
+                display: block;
+                overflow: hidden;
+            }
+
+            .divNewspaperHighSource .source-tile .SourceTitle .SourceCount {
+                background: #EEE;
+                border-radius: 70px;
+                height: 70px;
+                bottom: 35px;
+                position: relative;
+            }
+
+                .divNewspaperHighSource .source-tile .SourceTitle .SourceCount span {
+                    font-size: 1.6vw;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+
+.divTelegramHighSource {
+    text-align: center;
+    padding: 50px;
+    height: 170px;
+    border-bottom: 1px solid #EEE;
+}
+
+    .divTelegramHighSource .source-title {
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .divTelegramHighSource .source-tile {
+        display: inline-block;
+        clear: none;
+        width: calc(calc(100% / 10) - 32px);
+        /*min-width: 60px;*/
+        border-radius: 5px;
+        height: 100px;
+        text-align: center;
+        margin: .7vw;
+    }
+
+        .divTelegramHighSource .source-tile.telegram {
+            background: #0099ff;
+        }
+
+        .divTelegramHighSource .source-tile .SourceTitle {
+        }
+
+            .divTelegramHighSource .source-tile .SourceTitle span {
+                padding: 10px 3px;
+                font-size: 1vw;
+                position: relative;
+                height: 80px;
+                display: block;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .divTelegramHighSource .source-tile .SourceTitle .SourceCount {
+                background: #EEE;
+                border-radius: 70px;
+                height: 70px;
+                bottom: 35px;
+                position: relative;
+            }
+
+                .divTelegramHighSource .source-tile .SourceTitle .SourceCount span {
+                    font-size: 1.6vw;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+
+.divTwitterHighSource {
+    text-align: center;
+    padding: 50px;
+    height: 170px;
+    border-bottom: 1px solid #EEE;
+}
+
+    .divTwitterHighSource .source-title {
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .divTwitterHighSource .source-tile {
+        display: inline-block;
+        clear: none;
+        width: calc(calc(100% / 10) - 32px);
+        /*min-width: 60px;*/
+        border-radius: 5px;
+        height: 100px;
+        text-align: center;
+        margin: .7vw;
+    }
+
+        .divTwitterHighSource .source-tile.twitter {
+            background: #00ccff;
+        }
+
+        .divTwitterHighSource .source-tile .SourceTitle {
+        }
+
+            .divTwitterHighSource .source-tile .SourceTitle span {
+                padding: 10px 3px;
+                font-size: 1vw;
+                position: relative;
+                height: 80px;
+                display: block;
+                overflow: hidden;
+            }
+
+            .divTwitterHighSource .source-tile .SourceTitle .SourceCount {
+                background: #EEE;
+                border-radius: 70px;
+                height: 70px;
+                bottom: 35px;
+                position: relative;
+            }
+
+                .divTwitterHighSource .source-tile .SourceTitle .SourceCount span {
+                    font-size: 1.6vw;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+.mediaCount {
+    height: 300px;
+}
+
+    .mediaCount .newscount {
+        background: #ff823f;
+        height: 300px;
+        float: right;
+        clear: none;
+        width: 30%;
+    }
+
+        .mediaCount .newscount span {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            font-size: 25px;
+            color: #FFF;
+            padding: 50px 0;
+        }
+
+        .mediaCount .newscount .number {
+            padding: 0;
+            font-size: 50px;
+        }
+
+.othermediacount {
+    float: right;
+    clear: none;
+    width: 70%;
+}
+
+    .othermediacount .first-left-row {
+    }
+
+        .othermediacount .first-left-row .first-left-newspaper {
+            float: right;
+            clear: none;
+            width: 50%;
+            background: #14a0c1;
+            height: 200px;
+            text-align: center;
+        }
+
+        .othermediacount .first-left-row .first-left-telegram {
+            float: right;
+            clear: none;
+            width: 50%;
+            background: #0099ff;
+            height: 200px;
+            text-align: center;
+        }
+
+        .othermediacount .first-left-row .first-left-newspaper span {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            font-size: 25px;
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .othermediacount .first-left-row .first-left-telegram span {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            font-size: 25px;
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .othermediacount .first-left-row .first-left-newspaper .number {
+            padding: 0;
+            font-size: 50px;
+        }
+
+        .othermediacount .first-left-row .first-left-telegram .number {
+            padding: 0;
+            font-size: 50px;
+        }
+
+    .othermediacount .second-left-row {
+        height: 100px;
+        text-align: center;
+    }
+
+
+        .othermediacount .second-left-row .first-left-twitter {
+            background: #00ccff;
+        }
+
+            .othermediacount .second-left-row .first-left-twitter span {
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+                font-size: 25px;
+                color: #FFF;
+                padding: 0px 0;
+            }
+
+            .othermediacount .second-left-row .first-left-twitter .number {
+                padding: 0;
+                font-size: 35px;
+            }
+
+.news-chart {
+    clear: none;
+    margin-top: 20px;
+    font-family: Conv_BTrafficBold !important;
+    border-bottom: 10px solid #ff823f;
+    /*font-size:80% !important;*/
+    border-top: 1px solid rgba(0,0,0,0.0625);
+    border-left: 1px solid rgba(0,0,0,0.0625);
+    border-right: 1px solid rgba(0,0,0,0.0625);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+    .news-chart tspan {
+        font-family: Conv_BTrafficBold !important;
+    }
+
+    .news-chart text {
+        font-family: Conv_BTrafficBold !important;
+    }
+
+
+
+.other-chart {
+    float: right;
+    clear: none;
+    width: 100%;
+    margin: 20px 10px;
+    font-family: Conv_BTrafficBold !important;
+}
+
+.newspaper-chart {
+    font-family: Conv_BTrafficBold !important;
+    border-left: 10px solid #14a0c1;
+    display: inline-block;
+    margin-left: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.0625);
+    border-right: 1px solid rgba(0,0,0,0.0625);
+    border-bottom: 1px solid rgba(0,0,0,0.0625);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+    .newspaper-chart tspan {
+        font-family: Conv_BTrafficBold !important;
+    }
+
+    .newspaper-chart text {
+        font-family: Conv_BTrafficBold !important;
+    }
+
+
+.twitter-chart {
+    display: inline-block;
+    position: relative;
+    left: 0 !important;
+    border-right: 10px solid #00ccff;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-top: 1px solid rgba(0,0,0,0.0625);
+    border-left: 1px solid rgba(0,0,0,0.0625);
+    border-bottom: 1px solid rgba(0,0,0,0.0625);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.telegram-chart {
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: center;
+    font-family: Conv_BTrafficBold;
+    border-top: 10px solid #0099ff;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-right: 1px solid rgba(0,0,0,0.0625);
+    border-left: 1px solid rgba(0,0,0,0.0625);
+    border-bottom: 1px solid rgba(0,0,0,0.0625);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.tooltipSize {
+    min-width: 100px !important;
+}
+
+.mediaCount i {
+    margin-left: 20px;
+    color: rgba(255,255,255,.5);
+}
+
+.divNewsOrientationSource {
+    background: #f2f2f2;
+    display: block;
+    min-height: 42px;
+}
+
+.divMostPosetiveSource .source-title {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.divMostPosetiveSource .source-tile .SourceTitle span {
+    padding: 10px 3px;
+    font-size: 1vw;
+    position: relative;
+    height: 80px;
+    display: block;
+    overflow: hidden;
+}
+
+.divMostPosetiveSource .source-tile .SourceTitle .SourceCount {
+    background: #EEE;
+    border-radius: 70px;
+    height: 70px;
+    bottom: 35px;
+    position: relative;
+}
+
+    .divMostPosetiveSource .source-tile .SourceTitle .SourceCount span {
+        font-size: 1.6vw;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+.divMostPosetiveSource .source-tile {
+    display: inline-block;
+    clear: none;
+    width: calc(calc(100% / 10) - 32px);
+    min-width: 70px;
+    border-radius: 5px;
+    height: 100px;
+    text-align: center;
+    margin: .7vw;
+}
+
+    .divMostPosetiveSource .source-tile.posetive {
+        background: #00b8ba;
+    }
+
+.divMostPosetiveSource {
+    text-align: center;
+    padding: 50px;
+    height: 170px;
+    border-bottom: 1px solid #EEE;
+}
+
+.divMostNegativeSource .source-title {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.divMostNegativeSource .source-tile .SourceTitle span {
+    padding: 10px 3px;
+    font-size: 1vw;
+    position: relative;
+    height: 80px;
+    display: block;
+    overflow: hidden;
+}
+
+.divMostNegativeSource .source-tile .SourceTitle .SourceCount {
+    background: #EEE;
+    border-radius: 70px;
+    height: 70px;
+    bottom: 35px;
+    position: relative;
+}
+
+    .divMostNegativeSource .source-tile .SourceTitle .SourceCount span {
+        font-size: 1.6vw;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+.divMostNegativeSource .source-tile {
+    display: inline-block;
+    clear: none;
+    width: calc(calc(100% / 10) - 32px);
+    border-radius: 5px;
+    height: 100px;
+    text-align: center;
+    margin: .7vw;
+}
+
+    .divMostNegativeSource .source-tile.negative {
+        background: #ff0000;
+    }
+
+.divMostNegativeSource {
+    text-align: center;
+    padding: 50px;
+    height: 170px;
+    border-bottom: 1px solid #EEE;
+}
+
+.negative-media .media-titles li {
+    font-size: .9em;
+}
+
+    .negative-media .media-titles li::before {
+        font-family: 'Font Awesome\ 5 Free';
+        content: "\f068" !important;
+        color: #e1013f;
+        font-weight: bold;
+        display: inline-block;
+        width: 2em;
+        top: 2px;
+        position: relative;
+        margin-left: -2px;
+        font-size: 1em;
+    }
+
+.posetive-media .media-titles li {
+    font-size: .9em;
+}
+
+    .posetive-media .media-titles li::before {
+        font-family: 'Font Awesome\ 5 Free';
+        content: "\f067" !important;
+        color: #00b8ba;
+        font-weight: bold;
+        display: inline-block;
+        width: 2em;
+        top: 2px;
+        position: relative;
+        margin-left: -2px;
+        font-size: 1em;
+    }
+
+.table-news-header {
+    text-align: center;
+    line-height: 50px;
+    background: #e1013f;
+    margin-top: 100px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#divTableNewsCount {
+    margin-top: 50px;
+}
+
+    #divTableNewsCount ul {
+    }
+
+        #divTableNewsCount ul li {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 12.5%;
+        }
+
+            #divTableNewsCount ul li div {
+                float: right;
+                width: 30%;
+                clear: none;
+                text-align: center;
+                border-bottom: 1px solid #da7a7e;
+                margin: 0 10px;
+            }
+
+            #divTableNewsCount ul li .name {
+                background: #EEE;
+            }
+
+            #divTableNewsCount ul li:first-child .name {
+                background: none;
+                border-bottom: 3px solid #000000;
+                font-weight: bold;
+            }
+
+            #divTableNewsCount ul li:first-child .count {
+                border-bottom: 3px solid #000000;
+                font-weight: bold;
+            }
+
+            #divTableNewsCount ul li:first-child .percent {
+                border-bottom: 3px solid #000000;
+                font-weight: bold;
+            }
+
+#divTableNewspaperCount {
+    margin-top: 50px;
+}
+
+    #divTableNewspaperCount ul {
+    }
+
+        #divTableNewspaperCount ul li {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 12.5%;
+        }
+
+            #divTableNewspaperCount ul li div {
+                float: right;
+                width: 30%;
+                clear: none;
+                text-align: center;
+                border-bottom: 1px solid #da7a7e;
+                margin: 0 10px;
+            }
+
+            #divTableNewspaperCount ul li .name {
+                background: #EEE;
+            }
+
+            #divTableNewspaperCount ul li:first-child .name {
+                background: none;
+                border-bottom: 3px solid #000000;
+                font-weight: bold;
+            }
+
+            #divTableNewspaperCount ul li:first-child .count {
+                border-bottom: 3px solid #000000;
+                font-weight: bold;
+            }
+
+            #divTableNewspaperCount ul li:first-child .percent {
+                border-bottom: 3px solid #000000;
+                font-weight: bold;
+            }
+
+.sugiri-chart {
+    font-family: Conv_BTrafficBold !important;
+    border-left: 10px solid #00B8BA;
+    display: block;
+    margin: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.0625);
+    border-right: 1px solid rgba(0,0,0,0.0625);
+    border-bottom: 1px solid rgba(0,0,0,0.0625);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.Negative-chart {
+    font-family: Conv_BTrafficBold !important;
+    border-left: 10px solid #E1013F;
+    background: #f2f2f2;
+    display: block;
+    margin: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.0625);
+    border-right: 1px solid rgba(0,0,0,0.0625);
+    border-bottom: 1px solid rgba(0,0,0,0.0625);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.third-video {
+    background: #00B8BA;
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    text-align: center;
+    direction: rtl;
+    color: #FFF;
+    font-size: 20px;
+}

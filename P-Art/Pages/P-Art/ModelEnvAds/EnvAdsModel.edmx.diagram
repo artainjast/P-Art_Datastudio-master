@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc6b508260c04588aafd9ab50f6f4de5" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_EnvAdsModel.AddressTypes" Width="1.5" PointX="0.75" PointY="9.625" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Advertises" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Brands" Width="1.5" PointX="3" PointY="6.875" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Campains" Width="1.5" PointX="5.25" PointY="7" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Cities" Width="1.5" PointX="0.75" PointY="5.875" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Competitors" Width="1.5" PointX="5.25" PointY="10" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Images" Width="1.5" PointX="7.5" PointY="1.375" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Statuses" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.Structures" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="DB_EnvAdsModel.StructureTypes" Width="1.5" PointX="0.75" PointY="2.25" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Structures_AddressTypes" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Advertises_Brands" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Advertises_Structures" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Images_Advertises" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Campains_Brands" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Competitors_Brands" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Structures_Cities" />
+        <AssociationConnector Association="DB_EnvAdsModel.FK_Structures_StructureTypes" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

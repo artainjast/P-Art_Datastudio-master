@@ -1,0 +1,167 @@
+﻿
+@media screen and (max-width:1140px) {
+}
+
+@media screen and (max-width:1024px) {
+    .fixed-table-of-content {
+        display: none !important;
+    }
+
+    .page {
+        width: 100%;
+        min-height: 296mm;
+        margin: 5% 0% 5% 0%;
+        border: 1px #D3D3D3 solid;
+        border-radius: 5px;
+        background: white;
+        display: block;
+        position: relative;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width:920px) {
+}
+
+@media screen and (max-width:860px) {
+}
+
+
+@media screen and (max-width:800px) {
+}
+
+@media screen and (max-width:768px) {
+}
+
+@media screen and (max-width:720px) {
+}
+
+@media screen and (max-width:640px) {
+}
+
+@media screen and (max-width:560px) {
+}
+
+@media screen and (max-width:480px) {
+}
+
+@media screen and (max-width:380px) {
+    .coverPage time {
+        position: absolute;
+        left: 0;
+        bottom: 113mm;
+        font-size: 14px;
+        color: #333;
+        padding: 0 2px;
+    }
+
+    .page {
+        width: 100%;
+        margin: 5% 0% 5% 0%;
+        border: 1px #D3D3D3 solid;
+        border-radius: 5px;
+        background: white;
+        display: block;
+        position: relative;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #fixedheader {
+        background: #34495E;
+        direction: rtl;
+        height: 75px;
+        overflow: visible;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        top: 0;
+        padding: 4px 0;
+        left: 0;
+    }
+
+    .coverPage {
+        margin-top: 0 !important;
+        height: auto;
+        min-height: auto;
+    }
+
+    .fehrestContainer .fehrestRow {
+        border-bottom: 1px dotted #ccc;
+        width: 95%;
+        padding: 0 5px;
+        margin: 3px auto 3px auto;
+        font-size: 9px;
+    }
+
+        .fehrestContainer .fehrestRow .newsTitle {
+            display: block;
+            cursor: pointer;
+            font-size: 10px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .fehrestContainer .fehrestRow .circleSing {
+            float: right;
+            display: block;
+            width: 6px;
+            text-align: right;
+            height: 6px;
+            background: #ff963b;
+            margin-left: 6px;
+            line-height: 26px;
+            margin-top: 8px;
+            border-radius: 4px;
+        }
+
+    .fehrestContainer .fehrestRow {
+    }
+
+    .fehrestContainer footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        left: 0px;
+        margin-top: 10px;
+    }
+
+    .pageContainer {
+        box-sizing: border-box;
+        padding: 2px;
+    }
+
+    .newsContainer .pageContainer .siteTitle {
+        border: 1px solid #999;
+        color: #111;
+        font-size: 15px;
+        min-width: 44px;
+        text-align: center;
+        margin-top: 4px;
+        padding: 0px;
+        width: 44px;
+        max-width: 44px;
+    }
+
+    .newsBody {
+        text-align: justify;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 28px;
+        color: #111;
+        font-size: 16px;
+        font-family: 'B Mitra';
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:360px) {
+}
+
+@media screen and (max-width:320px) {
+}

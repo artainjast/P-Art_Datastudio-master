@@ -1,0 +1,1538 @@
+﻿@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-Bold-web.eot');
+    src: url('/Styles/fonts/IRANSans-Bold-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-Bold-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-Bold-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-Bold-web.ttf') format('ttf');
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-Medium-web.eot');
+    src: url('/Styles/fonts/IRANSans-Medium-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-Medium-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-Medium-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-Medium-web.ttf') format('ttf');
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-UltraLight-web.eot');
+    src: url('/Styles/fonts/IRANSans-UltraLight-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-UltraLight-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-UltraLight-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-UltraLight-web.ttf') format('ttf');
+    font-weight: 200;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-Light-web.eot');
+    src: url('/Styles/fonts/IRANSans-Light-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-Light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-Light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-Light-web.ttf') format('ttf');
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/Styles/fonts/IRANSans-web.eot');
+    src: url('/Styles/fonts/IRANSans-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSans-web.ttf') format('ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'IranSansFa';
+    src: url('/Styles/fonts/IRANSansWeb(FaNum).eot');
+    src: url('/Styles/fonts/IRANSansWeb(FaNum).eot?#iefix') format('eot'), /* IE6–8 */
+    url('/Styles/fonts/IRANSansWeb(FaNum).woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/Styles/fonts/IRANSansWeb(FaNum).woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/Styles/fonts/IRANSansWeb(FaNum).ttf') format('ttf');
+    font-weight: normal;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "IranSansFa","IranSans",tahoma, arial;
+    line-height: 1.5;
+    font-size: 16px;
+    background: #fff;
+    padding: 5px;
+    color: #000;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: none;
+    text-align: center;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    clear: none !important;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+    zoom: 1;
+}
+/* IE7 */
+[class*="typicons-"]:before {
+    color: #A8A8A8;
+    font-family: 'Typicons', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+    p img {
+        float: left;
+        margin: 0 10px 5px 0;
+        padding: 0;
+    }
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.textL {
+    text-align: left;
+}
+
+.textR {
+    text-align: right;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+::selection {
+    background: #BA201D;
+    text-shadow: none;
+}
+
+.home {
+    font-size: 26px;
+}
+
+    .home h2 {
+    }
+
+    .home h4 {
+        margin: 0px;
+        padding: 0px;
+        text-align: right;
+        font-size: 15px;
+    }
+
+        .home h4 i {
+            font-size: 25px;
+            border: 1px solid #3ec9cb;
+            border-radius: 3px;
+            color: #3ec9cb;
+            margin: 5px;
+        }
+
+.pageContainer {
+    box-sizing: border-box;
+    padding: 5mm 10mm;
+}
+
+.page header {
+    box-sizing: border-box;
+}
+
+    .page header span {
+        font-family: 'IranSans';
+        font-size: 13px;
+        color: #666;
+    }
+
+.headerBultanTitle {
+    font-size: 11px !important;
+}
+
+.page header span .headerTitle {
+}
+
+.page header span .headerBultanDate {
+}
+
+.home {
+    direction: rtl;
+}
+
+.page footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+}
+
+    .page footer span {
+        direction: rtl;
+        width: 60px;
+        position: relative;
+        color: #FFF;
+        font: normal 16px 'IranSansFa';
+        text-align: center;
+        background: #bf1e1e;
+        display: inline-block;
+        border-radius: 10px;
+        bottom: 25px;
+    }
+
+.twitterpage footer span {
+    background: #03A9F4;
+}
+
+.telegrampage footer span {
+    background: #039BE5;
+}
+
+.instagrampage footer span {
+    background: #F128A6;
+}
+
+.footer-sarbarg hr {
+    border: 1px solid #bf1e1e;
+    background: #bf1e1e;
+}
+
+.twitterpage .footer-sarbarg hr {
+    border: 1px solid #03A9F4;
+    background: #03A9F4;
+}
+
+.telegrampage .footer-sarbarg hr {
+    border: 1px solid #039BE5;
+    background: #039BE5;
+}
+
+.instagrampage .footer-sarbarg hr {
+    border: 1px solid #F128A6;
+    background: #F128A6;
+}
+
+.socialmedia footer span {
+    direction: rtl;
+    width: 40px;
+    left: 13px;
+    position: absolute;
+    color: #FFF;
+    font: normal 16px 'IranSansFa';
+    text-align: center;
+    top: 75px;
+}
+
+.coverPage {
+    position: relative;
+}
+
+    .coverPage time {
+        position: absolute;
+        left: 35mm;
+        /*bottom: 0mm;*/
+        font-size: 22px;
+        color: #FFF;
+    }
+
+    .coverPage footer {
+        display: none;
+    }
+
+.page {
+    background: white;
+    display: block;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    box-sizing: border-box;
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    font-family: 'IranSans';
+    margin: 25px auto;
+}
+
+.twitterpage header {
+    margin-bottom: 20px;
+}
+
+.telegrampage header {
+    margin-bottom: 20px;
+}
+
+.header-container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.headerDate {
+    font-family: 'IranSansFa' !important;
+    font-size: 11px !important;
+    position: relative;
+    left: 10px;
+}
+
+    .headerDate i {
+        font-size: 16px;
+        margin-right: 5px;
+        color: #bf1e1e;
+    }
+
+.fehrest-header .top-header {
+    top: 30px;
+    position: relative;
+}
+
+.bottom-header {
+    text-align: right;
+    position: relative;
+    bottom: -20px;
+}
+
+.main-fehrast {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+    .main-fehrast li {
+        border: 1px solid #bbb;
+        padding: 10px 75px 10px 10px;
+        margin: 5px 0px;
+        position: relative;
+        min-height: 70px;
+    }
+
+    .main-fehrast .top-item:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-fehrast .middle-item:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-fehrast .bottom-item:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-fehrast .top-item .item-source {
+        text-align: right;
+        float: right;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .main-fehrast .top-item .item-date {
+        text-align: right;
+        float: left;
+        font-family: 'IranSansFa' !important;
+        font-size: 10px;
+    }
+
+    .main-fehrast .top-item .item-time {
+        text-align: right;
+        float: left;
+        font-family: 'IranSansFa' !important;
+        font-size: 10px;
+    }
+
+    .main-fehrast .top-item .seperator {
+        text-align: right;
+        float: left;
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .main-fehrast .top-item i {
+        text-align: right;
+        float: left;
+        color: #bf1e1e;
+        font-size: 13px;
+        margin-right: 5px;
+        opacity: 0.8;
+    }
+
+    .main-fehrast .middle-item {
+    }
+
+        .main-fehrast .middle-item .item-lead {
+            font-size: 10px;
+            text-align: right;
+        }
+
+    .main-fehrast .bottom-item .relation-title {
+        float: right;
+        color: #bf1e1e;
+        font-size: 10px;
+        margin-left: 5px;
+    }
+
+.bottom-item {
+    margin-top: 3px;
+}
+
+.main-fehrast .bottom-item .item-relations {
+    float: right;
+    color: #bf1e1e;
+    font-size: 10px;
+}
+
+.sitelogo {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    width: 68px;
+    height: 64px;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+    .sitelogo img {
+        width: 68px;
+        height: 64px;
+    }
+
+.main-news {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #AAA;
+    padding: 5px;
+    height: 24.5cm;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+}
+
+    .main-news:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-news li {
+        border: 1px solid #bbb;
+        padding: 10px 10px 10px 10px;
+        margin: 5px 0px;
+        position: relative;
+    }
+
+    .main-news .top-header .logosite:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-news .top-header .logosite img {
+        float: right;
+        max-width: 100px;
+        width: 100px;
+    }
+
+    .main-news .top-header .first-top .sitetitle {
+        float: right;
+        font-size: 14px;
+        margin-right: 5px;
+        font-weight: 600;
+        display: inline-block;
+        width: auto;
+        text-align: right;
+    }
+
+    .main-news .top-header .first-top .keys-title {
+        float: left;
+        font-size: 9px;
+        margin-right: 5px;
+    }
+
+        .main-news .top-header .first-top .keys-title i {
+            color: #fb841e;
+            margin-left: 5px;
+        }
+
+    .main-news .top-header .first-top .key-name {
+        float: left;
+        font-size: 8px;
+        margin-right: 5px;
+    }
+
+    .main-news .top-header .first-top {
+        height: 25px;
+        padding-top: 5px;
+    }
+
+        .main-news .top-header .first-top:after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+    .main-news .top-header {
+    }
+
+        .main-news .top-header:after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+        .main-news .top-header .second-top {
+            text-align: right;
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 1px;
+            position: relative;
+            bottom: 10px;
+            right: 5px;
+        }
+
+            .main-news .top-header .second-top .news-title {
+                font-size: 11px;
+                text-align: right;
+                font-weight: 600;
+                text-decoration: none;
+                color: #222;
+            }
+
+    .main-news .middle-item {
+        position: relative;
+    }
+
+        .main-news .middle-item:after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+        .main-news .middle-item .lead {
+            float: right;
+            width: 60%;
+            height: 100%;
+            padding: 0 5px;
+            min-height: 200px;
+            background: #d3ffdc;
+            overflow: hidden;
+        }
+
+        .main-news .middle-item .lead-noimg {
+            float: right;
+            width: 100%;
+            height: 100%;
+            padding: 0 5px;
+            float: right;
+            height: 100%;
+            padding: 0 5px;
+            background: #d3ffdc;
+        }
+
+            .main-news .middle-item .lead-noimg p {
+                font-size: 11px;
+                color: #555;
+                line-height: 25px;
+                text-align: justify;
+            }
+
+        .main-news .middle-item .lead p {
+            font-size: 11px;
+            color: #555;
+            line-height: 25px;
+            text-align: justify;
+            padding: 5px;
+        }
+
+        .main-news .middle-item .lead-image {
+            float: left;
+            width: 39.5%;
+            height: 200px;
+            min-height: 200px;
+        }
+
+            .main-news .middle-item .lead-image img {
+                height: 100%;
+            }
+
+    .main-news .third-item-sub {
+        position: absolute;
+        bottom: 140px;
+        left: 5%;
+        right: 5%;
+        padding: 5px;
+    }
+
+        .main-news .third-item-sub span {
+            width: 100%;
+            display: inline-block;
+            font-size: 10px;
+            color: #bf1e1e;
+        }
+
+        .main-news .third-item-sub i {
+            color: #bf1e1e;
+            font-size: 22px;
+        }
+
+    .main-news .third-item {
+    }
+
+        .main-news .third-item:after {
+        }
+
+        .main-news .third-item p {
+            text-align: justify;
+            font-size: 10px;
+            line-height: 30px;
+            color: #333;
+        }
+
+    .main-news .four-item {
+        position: absolute;
+        bottom: 90px;
+        left: 5%;
+        right: 5%;
+        padding: 5px;
+        border-top: 1px solid #aaa;
+    }
+
+        .main-news .four-item .item-rel {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+            .main-news .four-item .item-rel span:first-child {
+                float: right;
+                font-size: 10px;
+                font-weight: 600;
+            }
+
+            .main-news .four-item .item-rel:after {
+                clear: both;
+                display: table;
+                content: " ";
+            }
+
+            .main-news .four-item .item-rel .seperator {
+                float: left;
+                font-size: 11px;
+                margin-left: 5px;
+                margin-bottom: 5p;
+                position: relative;
+                bottom: 2px;
+            }
+
+            .main-news .four-item .item-rel i {
+                float: left;
+                font-size: 14px;
+                font-weight: 600;
+                color: #bf1e1e;
+            }
+
+            .main-news .four-item .item-rel .item-date {
+                float: left;
+                font-size: 10px;
+                margin-left: 5px;
+                font-family: 'IranSansFa';
+            }
+
+            .main-news .four-item .item-rel .item-time {
+                float: left;
+                font-size: 10px;
+                margin-left: 5px;
+                font-family: 'IranSansFa';
+            }
+
+        .main-news .four-item .item-rel-source {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+            .main-news .four-item .item-rel-source:after {
+                clear: both;
+                display: table;
+                content: " ";
+            }
+
+            .main-news .four-item .item-rel-source .item-relations {
+                float: right;
+                color: #bf1e1e;
+                font-size: 10px;
+            }
+
+            .main-news .four-item .item-rel-source .rel-title {
+                float: left;
+                font-size: 9px;
+            }
+
+            .main-news .four-item .item-rel-source .rel-count {
+                float: left;
+                font-size: 11px;
+                font-weight: 500;
+                font-family: 'IranSansFa';
+                margin-right: 5px;
+            }
+
+            .main-news .four-item .item-rel-source i {
+                float: left;
+                font-size: 13px;
+                font-weight: 600;
+                color: #bf1e1e;
+                margin-right: 10px;
+            }
+
+.main-twits {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #AAA;
+    padding: 5px;
+    margin: 10px auto;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+}
+
+    .main-twits .middle-item .lead-image {
+        display: none;
+    }
+
+    .main-twits .top-header:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-twits .logosite {
+        float: right;
+        max-width: 100px;
+        width: 100px;
+        height: 70px;
+    }
+
+        .main-twits .logosite img {
+            border-radius: 50px;
+            width: 65%;
+        }
+
+    .main-twits .first-top {
+        text-align: right;
+    }
+
+        .main-twits .first-top .sitetitle {
+            font-size: 12px;
+        }
+
+    .main-twits .user-id {
+        float: left;
+        font-size: 12px;
+        font-family: 'IranSansFa';
+        margin-top: 5px;
+        display: none;
+    }
+
+    .main-twits .first-top .fa-user-plus {
+        float: left;
+        color: #BA201D;
+        font-size: 14px;
+        margin-right: 5px;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .main-twits .second-top {
+        text-align: right;
+        font-size: 12px;
+    }
+
+    .main-twits .middle-item {
+        font-size: 12px;
+        text-align: right;
+    }
+
+        .main-twits .middle-item .lead {
+            font-size: 12px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+            .main-twits .middle-item .lead .item-lead {
+                line-height: 25px;
+            }
+
+        .main-twits .middle-item:after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+    .main-twits .third-item {
+        border-top: 1px solid #ddd;
+        font-size: 11px;
+        padding: 10px 5px 5px 5px;
+    }
+
+        .main-twits .third-item:after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+        .main-twits .third-item i.fa-calendar {
+            float: right;
+            font-size: 14px;
+            font-weight: 600;
+            color: #bf1e1e;
+        }
+
+        .main-twits .third-item .item-date {
+            float: right;
+            margin-right: 5px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-twits .third-item .seperator {
+            float: right;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+
+        .main-twits .third-item .item-time {
+            float: right;
+            margin-right: 5px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-twits .third-item .fa-key {
+            float: right;
+            margin-right: 10px;
+            color: #fb841e;
+            margin-top: 5px;
+            font-size: 12px;
+            position: relative;
+            bottom: 3px;
+        }
+
+        .main-twits .third-item .key-name {
+            float: right;
+            margin-right: 5px;
+        }
+
+        .main-twits .third-item .key-title {
+            float: right;
+            margin-right: 5px;
+        }
+
+        .main-twits .third-item .fa-heart {
+            color: #F00;
+            margin-right: 5px;
+            float: left;
+            font-size: 14px;
+        }
+
+        .main-twits .third-item .fa-comment {
+            color: #F00;
+            margin-right: 5px;
+            float: left;
+            font-size: 14px;
+            color: #529bf3;
+        }
+
+        .main-twits .third-item .like-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 14px;
+        }
+
+        .main-twits .third-item .fa-heart {
+        }
+
+        .main-twits .third-item .comment-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 14px;
+        }
+
+        .main-twits .third-item .fa-retweet {
+            color: #529bf3;
+            margin-right: 5px;
+            float: left;
+            font-size: 14px;
+        }
+
+        .main-twits .third-item .retweet-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 14px;
+        }
+
+.main-telegram {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #AAA;
+    padding: 5px;
+    margin: 5px auto;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+}
+
+    .main-telegram .top-header:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-telegram .logosite {
+        float: right;
+        max-width: 100px;
+        width: 90px;
+        height: 70px;
+    }
+
+        .main-telegram .logosite img {
+            border-radius: 50px;
+            width: 65%;
+        }
+
+    .main-telegram .first-top {
+        text-align: right;
+    }
+
+        .main-telegram .first-top .sitetitle {
+            font-size: 12px;
+        }
+
+    .main-telegram .user-id {
+        float: left;
+        font-size: 12px;
+        font-family: 'IranSansFa';
+        margin-top: 5px;
+        display: none;
+    }
+
+    .main-telegram .first-top .fa-user-plus {
+        float: left;
+        color: #BA201D;
+        font-size: 14px;
+        margin-right: 5px;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .main-telegram .second-top {
+        text-align: right;
+        font-size: 12px;
+    }
+
+    .main-telegram .middle-item {
+        font-size: 14px;
+        text-align: right;
+    }
+
+        .main-telegram .middle-item .message {
+            border-top: 1px solid #AAA;
+            font-size: 10px;
+        }
+
+            .main-telegram .middle-item .message .item-message {
+                margin: 10px 0;
+                line-height: 25px;
+            }
+
+    .main-telegram .third-item {
+        border-top: 1px solid #ddd;
+        font-size: 11px;
+        padding: 10px 5px 5px 5px;
+    }
+
+        .main-telegram .third-item:after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+        .main-telegram .third-item i.fa-calendar {
+            float: right;
+            font-size: 14px;
+            font-weight: 600;
+            color: #bf1e1e;
+        }
+
+        .main-telegram .third-item .item-date {
+            float: right;
+            margin-right: 5px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-telegram .third-item .seperator {
+            float: right;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+
+        .main-telegram .third-item .item-time {
+            float: right;
+            margin-right: 5px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-telegram .third-item .fa-key {
+            float: right;
+            margin-right: 10px;
+            color: #fb841e;
+            font-size: 14px;
+        }
+
+        .main-telegram .third-item .key-name {
+            float: right;
+            margin-right: 5px;
+        }
+
+        .main-telegram .third-item .key-title {
+            float: right;
+            margin-right: 5px;
+        }
+
+        .main-telegram .third-item .fa-heart {
+            color: #F00;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .main-telegram .third-item .like-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-telegram .third-item .fa-eye {
+            float: left;
+            margin-top: 2px;
+            color: #0088cc;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .main-telegram .third-item .comment-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-telegram .third-item .fa-retweet {
+            color: #529bf3;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .main-telegram .third-item .retweet-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+.cover-info {
+    position: relative;
+    top: 50%;
+}
+
+.socialmedia .cover-info .parmin-title {
+    color: #000;
+    font-weight: 600;
+}
+
+.socialmedia .cover-info .parmin-title {
+    color: #000;
+}
+
+.cover-info .parmin-title {
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    color: #C667B8;
+    font-weight: 500;
+    position: relative;
+    bottom: 10px;
+    font-family: IranSansFa;
+}
+
+.cover-info .parmin-date {
+    font-size: 16px;
+    color: #C667B8;
+    font-family: 'IranSansFa';
+}
+
+.socialmedia .cover-info .parmin-date {
+    color: #000;
+    font-weight: 600;
+}
+
+.socialmedia img {
+    width: 100%;
+}
+
+.sarbarg-news-icon {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: 50px;
+    left: 40px;
+}
+
+.header-center {
+    float: right;
+    margin-right: 5px;
+}
+
+.footer-sarbarg img {
+    float: left;
+}
+
+.sarbarg-news {
+    height: 100px;
+}
+
+.telegrammedia img {
+    width: 100%;
+}
+
+.instagrammedia img {
+    width: 100%;
+}
+
+.newsvalue-0 {
+    border: 2px solid #AAA;
+}
+
+.newsvalue-1 {
+    border: 2px solid #07a100;
+}
+
+.newsvalue-2 {
+    border: 2px solid #F00;
+}
+
+.newsvalue-3 {
+    border: 2px solid #529bf3;
+}
+
+.newsvalue-4 {
+    border: 2px solid #ffe200;
+}
+
+.newsbody-pic {
+    float: left !important;
+    width: 100px;
+    position: relative;
+    bottom: 65px;
+}
+
+.highlight {
+    color: #f00;
+    background: #ffe000;
+    padding: 3px 5px;
+    border-radius: 20px;
+}
+
+
+.main-instagram {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #AAA;
+    padding: 5px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+}
+
+    .main-instagram .top-header:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    .main-instagram .logosite {
+        float: right;
+        max-width: 100px;
+        width: 90px;
+        height: 70px;
+    }
+
+        .main-instagram .logosite img {
+            border-radius: 50px;
+            width: 65%;
+        }
+
+    .main-instagram .first-top {
+        text-align: right;
+    }
+
+        .main-instagram .first-top .sitetitle {
+            font-size: 12px;
+        }
+
+    .main-instagram .user-id {
+        float: left;
+        font-size: 12px;
+        font-family: 'IranSansFa';
+        margin-top: 5px;
+        display: none;
+    }
+
+    .main-instagram .first-top .fa-user-plus {
+        float: left;
+        color: #BA201D;
+        font-size: 14px;
+        margin-right: 5px;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .main-instagram .second-top {
+        text-align: right;
+        font-size: 12px;
+    }
+
+    .main-instagram .middle-item {
+        font-size: 14px;
+        text-align: right;
+    }
+
+        .main-instagram .middle-item::after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+        .main-instagram .middle-item .message {
+            float: right;
+            width: 50%;
+            font-size: 12px;
+            max-height: 790px;
+            overflow: hidden;
+        }
+
+        .main-instagram .middle-item .post-pic {
+            float: right;
+            width: 50%;
+            max-height: 320px;
+            text-align: center;
+        }
+
+            .main-instagram .middle-item .post-pic img {
+                max-height: 320px;
+            }
+
+        .main-instagram .middle-item .message .item-message {
+            margin: 10px 0;
+            line-height: 25px;
+        }
+
+    .main-instagram .third-item {
+        border-top: 1px solid #ddd;
+        font-size: 11px;
+        padding: 10px 5px 5px 5px;
+    }
+
+        .main-instagram .third-item:after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+        .main-instagram .third-item i.fa-calendar {
+            float: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: #bf1e1e;
+            margin-right: 5px;
+        }
+
+        .main-instagram .third-item .item-date {
+            float: left;
+            margin-right: 5px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-instagram .third-item .seperator {
+            float: left;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+
+        .main-instagram .third-item .item-time {
+            float: left;
+            margin-right: 5px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-instagram .third-item .fa-key {
+            float: right;
+            color: #fb841e;
+            font-size: 14px;
+        }
+
+        .main-instagram .third-item .key-name {
+            float: right;
+            margin-right: 5px;
+        }
+
+        .main-instagram .third-item .key-title {
+            float: right;
+            margin-right: 5px;
+        }
+
+        .main-instagram .third-item .fa-heart {
+            color: #F00;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .main-instagram .third-item .like-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-instagram .third-item .fa-eye {
+            float: left;
+            margin-top: 2px;
+            color: #0088cc;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .main-instagram .third-item .comment-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+        .main-instagram .third-item .fa-retweet {
+            color: #529bf3;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .main-instagram .third-item .retweet-count {
+            float: left;
+            margin-right: 50px;
+            font-family: 'IranSansFa';
+            font-size: 12px;
+        }
+
+    .main-instagram .feature-icon {
+        float: left;
+    }
+
+        .main-instagram .feature-icon .fa-comment {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0088cc;
+        }
+
+        .main-instagram .feature-icon .comment-count {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            font-family: 'IranSansFa';
+            margin-right: 20px;
+        }
+
+        .main-instagram .feature-icon .fa-heart {
+            font-size: 14px;
+            font-weight: 600;
+            color: #bf1e1e;
+            margin-right: 5px;
+            margin-left: 20px;
+        }
+
+        .main-instagram .feature-icon .like-count {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            font-family: 'IranSansFa';
+            margin-right: 20px;
+        }
+
+        .main-instagram .feature-icon .fa-comment {
+            font-size: 14px;
+            font-weight: 600;
+            color: #529bf3;
+            margin-right: 5px;
+        }
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-bottom-10 {
+    margin-top: 10px;
+}
+
+.headerTitle {
+    width: 385px;
+    display: inline-block;
+    text-align: right;
+    font-weight: 600;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+
+    @bottom-center {
+    }
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        background: #fff;
+    }
+
+    .nimtaGalleryContainer {
+        display: none;
+    }
+
+    .delete_chart {
+        display: none;
+    }
+
+    .fixed-table-of-content {
+        display: none;
+    }
+
+    .page {
+        background: white;
+        display: block;
+        position: relative;
+        box-shadow: none !important;
+        position: relative;
+        border: none !important;
+        border-radius: 0 !important;
+        box-sizing: border-box;
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        font-family: 'IranSans';
+        page-break-after: always;
+    }
+
+    .deleteNewsBooltan, #fixedheader {
+        display: none;
+    }
+
+    .shahedLinkUrl {
+    }
+
+    .col-md-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .content_container_preload:before {
+        content: "";
+        position: absolute;
+        left: 40%;
+        top: 16%;
+        z-index: 99;
+        background: none;
+        width: 190px;
+        height: 190px;
+    }
+
+    .col-md-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

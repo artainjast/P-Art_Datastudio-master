@@ -1,0 +1,2287 @@
+﻿#mainSection {
+    direction: ltr;
+}
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Bold.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Medium.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.ttf') format('ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Light.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Light.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_Light.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum).eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum).eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum).woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum).woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum).ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.PanelContentArea {
+    background: #f9fafb;
+}
+
+.sidebarItem {
+    box-sizing: content-box;
+}
+
+.filterRow, .chartRow {
+    margin-top: 20px;
+    max-width: initial;
+}
+
+.chartRowW {
+    max-width: initial;
+}
+
+.social_all_count {
+    background: #fff;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px #ccc;
+}
+
+    .social_all_count .social_all {
+        /*border-left: 1px solid #ddd;*/
+        height: 80px;
+        display: inline-block;
+        width: 19%;
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+    }
+
+        .social_all_count .social_all:last-child:before {
+            border-left: none;
+            display: none;
+        }
+
+        .social_all_count .social_all .title {
+            position: absolute;
+            top: 4px;
+            right: 10px;
+            font-size: 13px;
+        }
+
+        .social_all_count .social_all .count {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .social_all_count .social_all .sidebarIcon {
+            position: absolute;
+            top: 25px;
+            left: 10px;
+        }
+
+            .social_all_count .social_all .sidebarIcon i {
+                font-size: 3.5rem;
+            }
+
+        .social_all_count .social_all:before {
+            content: "";
+            display: block;
+            height: 96%;
+            width: 1px;
+            position: absolute;
+            left: 0px;
+            top: 7%;
+            background: #dedede;
+        }
+
+.textbox {
+    margin-left: 10px;
+    width: 145px;
+}
+
+.hasDatepicker {
+    width: 110px;
+}
+
+.btn-danger {
+    width: 24%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+
+#btn_ShowNews {
+    max-width: 100px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+.btn-danger.blur {
+    opacity: 0.5;
+}
+
+.btn-group {
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .btn-group .btn-danger {
+    }
+
+
+
+
+
+.table {
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table td, .table th {
+        padding: .75rem;
+        vertical-align: top;
+        text-align: center;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table .thead-dark th {
+        color: #fff;
+        background-color: #212529;
+        border-color: #32383e;
+    }
+
+    .table tbody, .table tbody tr, .table tbody tr td {
+        z-index: 99999;
+    }
+
+.topChannels {
+}
+
+    .topChannels h3 {
+        margin: 10px auto;
+    }
+
+
+
+
+
+
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.pageloading {
+    z-index: 99999999;
+    width: 100%;
+    height: 1000vh;
+    background: #FFFFFFCC;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    display: none;
+    position:relative;
+}
+
+    .pageloading img {
+        position: absolute;
+        top: 90px;
+        left: 40%;
+        width: 25%;
+    }
+
+    .pageloading.showing {
+        display: block;
+    }
+
+.pageloadingcampain {
+    background: #FFFFFFCC;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    z-index: 99999999999999;
+}
+
+    .pageloadingcampain img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pageloadingcampain.showing {
+        display: block;
+    }
+
+.pageloadingall {
+    background: #FFFFFFCC;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    height: 100%;
+    z-index: 99999999999999;
+}
+
+    .pageloadingall img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .pageloadingall.showing {
+        display: block;
+    }
+
+.content_container_preload {
+    min-height: 380px;
+    height: 380px;
+    position: relative;
+}
+
+.content_container_preload_detail_min {
+    min-height: 470px;
+    height: 470px;
+    max-height: 700px;
+    position: relative;
+}
+
+.content_container_preload_min {
+    min-height: 380px;
+    height: 380px;
+    max-height: 700px;
+    position: relative;
+}
+
+.content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 20%;
+    top: 16%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 20%;
+    top: 16%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box12 .content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 36%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box9 .content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 33%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box8 .content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 30%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box6 .content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 24%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box4 .content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 7%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box3 .content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: -5%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 220px;
+    background-size: 220px;
+}
+
+
+.box12 .content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 36%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box9 .content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 33%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box8 .content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 30%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box6 .content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 24%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box4 .content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 7%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 220px;
+    background-size: 280px;
+}
+
+.box3 .content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: -5%;
+    top: 30%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingcolor.gif);
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 220px;
+    background-size: 220px;
+}
+
+.highcharts-container {
+    z-index: 999 !important;
+}
+
+.all_rates {
+    height: 100px;
+}
+
+    .all_rates .title {
+        position: absolute;
+        top: 8px;
+        right: 24px;
+        font-size: 12px;
+    }
+
+    .all_rates .title2 {
+        position: absolute;
+        top: 82px;
+        left: 24px;
+        font-size: 12px;
+    }
+
+    .all_rates .count {
+        position: absolute;
+        top: 50px;
+        left: 10%;
+        border-bottom: 1px solid #ccc;
+    }
+
+.box4 .all_rates .title2 {
+    position: absolute;
+    top: 82px;
+    left: 24px;
+    font-size: 12px;
+}
+
+.all_rates .arrow {
+    position: absolute;
+    top: 50px;
+    right: 20%;
+    display: none;
+}
+
+.all_rates .arrow_zero {
+    position: absolute;
+    top: 50px;
+    /*display:none;*/
+    right: 5%;
+}
+
+.box4 .all_rates .arrow {
+    position: absolute;
+    top: 14px;
+    right: 4%;
+}
+
+.telbot {
+}
+
+.instaleft {
+    height: 113px;
+}
+
+.adsleft .content_container_preload_min {
+    height: 180px !important;
+    min-height: 180px !important;
+}
+
+.highcharts-figure {
+    box-shadow: 1px 1px 6px #ccc;
+    border-radius: 4px;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
+
+.highcharts-figure, .highcharts-data-table table {
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+.highcharts-title, tspan, .highcharts-label, .highcharts-label b, .highcharts-label span, .count, text, rect, .table td, .table th, .tweet-time {
+    font-family: 'IranSans_fa',tahoma !important;
+}
+
+#top-twitter {
+    padding-left: 20px;
+    direction: ltr
+}
+
+.twitter-post {
+    direction: ltr;
+    padding: 10px 15px;
+}
+
+    .twitter-post h2 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        padding: 5px;
+        border-bottom: 1px solid #333;
+    }
+
+    .twitter-post header {
+        text-align: left;
+        position: relative;
+    }
+
+    .twitter-post .tweet-pic {
+        display: inline-block;
+        text-align: left;
+    }
+
+        .twitter-post .tweet-pic a {
+            display: block;
+        }
+
+            .twitter-post .tweet-pic a img {
+                border-radius: 50%;
+                width: 96px;
+                height: 96px;
+            }
+
+    .twitter-post .tweet-user {
+        display: inline-block;
+        text-align: left;
+        /* height: 100px; */
+        position: absolute;
+        top: 20px;
+        left: 115px;
+    }
+
+        .twitter-post .tweet-user span {
+            display: block;
+            line-height: 1.3125;
+            color: #111;
+            font-weight: bold;
+        }
+
+        .twitter-post .tweet-user abbr {
+            display: block;
+            color: #999;
+        }
+
+    .twitter-post figure {
+    }
+
+    .twitter-post .tweet-post {
+        text-align: justify;
+        direction: rtl;
+    }
+
+    .twitter-post footer {
+    }
+
+    .twitter-post .tweet-time {
+        text-align: left;
+        margin-top: 5px;
+        font-size: 0.9rem;
+        color: #999;
+    }
+
+    .twitter-post .tweet-feedback {
+        border-top-color: rgb(235, 238, 240);
+        border-top-style: solid;
+        border-top-width: 1px;
+        padding: 6px 0;
+        margin-top: 10px;
+        text-align: left;
+        border-bottom-color: rgb(235, 238, 240);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
+
+        .twitter-post .tweet-feedback span {
+            color: #111;
+            font-weight: bold;
+        }
+
+        .twitter-post .tweet-feedback abbr {
+            font-size: 0.9rem;
+            color: #999;
+            margin-left: 5px;
+            margin-right: 15px;
+        }
+
+    .twitter-post .tweet-media {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+        .twitter-post .tweet-media img {
+            max-width: 80%;
+            max-height: 400px;
+        }
+
+.bx-wrapper {
+    margin-bottom: 0;
+}
+
+    .bx-wrapper .bx-controls-direction a {
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        outline: 0;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999px;
+        z-index: 9999;
+    }
+
+    .bx-wrapper .bx-prev {
+        left: -22px;
+    }
+
+    .bx-wrapper .bx-next {
+        margin-top: 10px !important;
+        left: -22px;
+        right: auto;
+    }
+
+tspan.highcharts-text-outline {
+    fill: #fff;
+}
+
+.slidePaging_next, .slidePaging_prev {
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    display: inline-block;
+    display: none;
+    cursor: pointer;
+}
+
+.slidePaging_next {
+    background: url('/Styles/img/slide_next.png') no-repeat;
+    left: -21px;
+    top: 27%;
+}
+
+.slidePaging_prev {
+    background: url('/Styles/img/slide_prev.png') no-repeat;
+    left: -21px;
+    top: 46%;
+}
+
+
+
+
+
+.map-point {
+    fill: red;
+}
+
+
+.heyo:hover {
+    fill: #CC2929;
+    transition: all .3s ease-in;
+}
+
+.enabled {
+    fill: #21669E;
+    cursor: pointer
+}
+
+.description {
+    pointer-events: none;
+    position: fixed;
+    font-size: 18px;
+    text-align: center;
+    background: white;
+    padding: 10px 15px;
+    z-index: 5;
+    /* height: 30px; */
+    line-height: 30px;
+    margin: 0 auto;
+    color: #21669e;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #eee;
+    transform: translateX(-50%);
+    display: none;
+    direction: rtl;
+    font-family: IranSans,B Mitra,Tahoma;
+}
+
+    .description.active {
+        display: block
+    }
+
+    .description:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        margin-left: -10px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+    }
+
+.svg-wrapper svg {
+    display: block;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.map-border {
+    fill: #242E47;
+}
+
+.map-province {
+    fill: #364669;
+    transition: fill 0.3s ease;
+}
+
+    .map-province:hover {
+        fill: #CA466B;
+    }
+
+.map-sea {
+    fill: #158690;
+}
+
+.map-island {
+    fill: #364669;
+}
+
+.map-sea-names {
+    fill: #D4DBE5;
+}
+
+.map-province-names {
+    fill: #D4DBE5;
+}
+
+#hyp_all_top_news, #hyp_all_top_social, #hyp_all_top_video, #hyp_all_top_radio {
+    position: relative;
+    top: 75px;
+    right: 5px;
+}
+
+.fa-minus-circle {
+    color: #e20000;
+    font-size: 16px;
+}
+
+.fa-plus-circle {
+    color: #22b100;
+    font-size: 16px;
+}
+
+#hyp_all_instagram, #hyp_all_twitter, #hyp_all_telegram, #hyp_all_website, #hyp_all_newspaper {
+    position: relative;
+    top: 40px;
+    right: -75px;
+}
+
+#hyp_social_count_day {
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+#hyp_tafkik_news_online, #hyp_tafkik_social, #hyp_tafkik_tv {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    z-index: 9991;
+}
+
+#hyp_top_hashtag, #hyp_jensiat, #hyp_news_mosbat_manfi {
+    position: relative;
+    top: 5px;
+    right: -265px;
+    z-index: 9991;
+}
+
+#hyp_top_twitter {
+    position: relative;
+    top: 3px;
+    right: -580px;
+    z-index: 9991;
+}
+
+#hyp_sugiri_webnewspaper_mosbat {
+    position: relative;
+    top: 3px;
+    right: -580px;
+    z-index: 9991;
+}
+
+#hyp_sugiri_webnewspaper_manfi {
+    position: relative;
+    top: 5px;
+    right: -580px;
+    z-index: 9991;
+}
+
+#hyp_cloud_chart_twitter {
+    position: relative;
+    top: 5px;
+    right: -420px;
+    z-index: 9991;
+}
+
+#hyp_cloud_chart_news {
+    position: relative;
+    top: 5px;
+    right: -420px;
+    z-index: 9991;
+}
+
+#hyp_map_instagram, #hyp_map_telegram, #hyp_map_twitter {
+    position: relative;
+    top: 5px;
+    right: -265px;
+    z-index: 9991;
+}
+
+#hyp_news_bohransaz_mosbat, #hyp_news_bohransaz_manfi {
+    position: relative;
+    top: 5px;
+    right: -420px;
+    z-index: 9991;
+}
+
+#hyp_newspaper {
+    position: relative;
+    top: 5px;
+    right: -895px;
+    z-index: 9991;
+}
+
+.showing_detail {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #555;
+    height: 0;
+    z-index: 9999;
+}
+
+.PanelContentArea {
+    scroll-behavior: smooth;
+}
+
+.item11 img {
+    width: 100px;
+    height: 200px;
+}
+
+#tabs {
+    width: 100%;
+    height: 30px;
+    padding-right: 2px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index: 5;
+}
+
+a {
+    cursor: pointer;
+}
+
+#tabs li {
+    float: right;
+    list-style: none;
+    margin-right: 5px;
+    border-radius: 3px;
+    clear: none;
+}
+
+    #tabs li:hover a {
+        color: #444;
+    }
+
+    #tabs li a {
+        font-size: small;
+        padding-top: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-bottom: 8px;
+        display: block;
+        background: #fda238;
+        border-radius: 3px;
+        text-decoration: none;
+        outline: none;
+    }
+
+        #tabs li a.inactive {
+            padding-top: 5px;
+            padding-bottom: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+            color: #666666;
+            background: #EEE;
+            outline: none;
+        }
+
+            #tabs li a:hover, #tabs li a.inactive:hover {
+                color: #5685bc;
+                outline: none;
+            }
+
+#tabsV {
+    width: 100%;
+    height: 30px;
+    padding-right: 2px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index:5;
+}
+
+    #tabsV li {
+        float: right;
+        list-style: none;
+        margin-right: 5px;
+        border-radius: 3px;
+        clear: none;
+    }
+
+        #tabsV li:hover a {
+            color: #444;
+        }
+
+        #tabsV li a {
+            font-size: small;
+            padding-top: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 8px;
+            display: block;
+            background: #fda238;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+            #tabsV li a.inactive {
+                padding-top: 5px;
+                padding-bottom: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                color: #666666;
+                background: #EEE;
+                outline: none;
+            }
+
+                #tabsV li a:hover, #tabsV li a.inactive:hover {
+                    color: #5685bc;
+                    outline: none;
+                }
+
+#tabsR {
+    width: 100%;
+    height: 30px;
+    padding-right: 2px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index: 5;
+}
+
+    #tabsR li {
+        float: right;
+        list-style: none;
+        margin-right: 5px;
+        border-radius: 3px;
+        clear: none;
+    }
+
+        #tabsR li:hover a {
+            color: #444;
+        }
+
+        #tabsR li a {
+            font-size: small;
+            padding-top: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 8px;
+            display: block;
+            background: #fda238;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+            #tabsR li a.inactive {
+                padding-top: 5px;
+                padding-bottom: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                color: #666666;
+                background: #EEE;
+                outline: none;
+            }
+
+                #tabsR li a:hover, #tabsR li a.inactive:hover {
+                    color: #5685bc;
+                    outline: none;
+                }
+
+#tabsTW {
+    width: 100%;
+    height: 30px;
+    padding-right: 2px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index: 999;
+}
+
+    #tabsTW li {
+        float: right;
+        list-style: none;
+        margin-right: 5px;
+        border-radius: 3px;
+        clear: none;
+    }
+
+        #tabsTW li:hover a {
+            color: #444;
+        }
+
+        #tabsTW li a {
+            font-size: small;
+            padding-top: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 8px;
+            display: block;
+            background: #fda238;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+            #tabsTW li a.inactive {
+                padding-top: 5px;
+                padding-bottom: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                color: #666666;
+                background: #EEE;
+                outline: none;
+            }
+
+                #tabsTW li a:hover, #tabsTW li a.inactive:hover {
+                    color: #5685bc;
+                    outline: none;
+                }
+
+#tabsTLG {
+    width: 100%;
+    height: 30px;
+    padding-right: 2px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index: 999;
+}
+
+    #tabsTLG li {
+        float: right;
+        list-style: none;
+        margin-right: 5px;
+        border-radius: 3px;
+        clear: none;
+    }
+
+        #tabsTLG li:hover a {
+            color: #444;
+        }
+
+        #tabsTLG li a {
+            font-size: small;
+            padding-top: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 8px;
+            display: block;
+            background: #fda238;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+            #tabsTLG li a.inactive {
+                padding-top: 5px;
+                padding-bottom: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                color: #666666;
+                background: #EEE;
+                outline: none;
+            }
+
+                #tabsTLG li a:hover, #tabsTLG li a.inactive:hover {
+                    color: #5685bc;
+                    outline: none;
+                }
+
+#tabsINS {
+    width: 100%;
+    height: 30px;
+    padding-right: 2px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index: 999;
+}
+
+    #tabsINS li {
+        float: right;
+        list-style: none;
+        margin-right: 5px;
+        border-radius: 3px;
+        clear: none;
+    }
+
+        #tabsINS li:hover a {
+            color: #444;
+        }
+
+        #tabsINS li a {
+            font-size: small;
+            padding-top: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 8px;
+            display: block;
+            background: #fda238;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+            #tabsINS li a.inactive {
+                padding-top: 5px;
+                padding-bottom: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                color: #666666;
+                background: #EEE;
+                outline: none;
+            }
+
+                #tabsINS li a:hover, #tabsINS li a.inactive:hover {
+                    color: #5685bc;
+                    outline: none;
+                }
+
+#tabsNWS {
+    width: 100%;
+    height: 30px;
+    padding-right: 2px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index: 999;
+}
+
+    #tabsNWS li {
+        float: right;
+        list-style: none;
+        margin-right: 5px;
+        border-radius: 3px;
+        clear: none;
+    }
+
+        #tabsNWS li:hover a {
+            color: #444;
+        }
+
+        #tabsNWS li a {
+            font-size: small;
+            padding-top: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 8px;
+            display: block;
+            background: #fda238;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+            #tabsNWS li a.inactive {
+                padding-top: 5px;
+                padding-bottom: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                color: #666666;
+                background: #EEE;
+                outline: none;
+            }
+
+                #tabsNWS li a:hover, #tabsNWS li a.inactive:hover {
+                    color: #5685bc;
+                    outline: none;
+                }
+
+.container h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    color: #5685bc;
+}
+
+.container p {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    font-size: small;
+}
+
+.container ul {
+    margin-left: 25px;
+    font-size: small;
+    line-height: 1.4;
+    list-style-type: disc;
+}
+
+.container li {
+    padding-bottom: 5px;
+    margin-left: 5px;
+}
+
+.owl-carousel-none {
+    border: none !important
+}
+
+.owl-carousel-detail {
+    border: none !important;
+    margin-top: 40px
+}
+
+.owl-content-a .Categories {
+    width: 19%;
+    float: right;
+    display: inline-block;
+    margin-right: 1%
+}
+
+    .owl-content-a .Categories:hover {
+        background: #F9F9F9
+    }
+
+.owl-content-a .box-owl {
+    display: inline-block;
+    line-height: 30px;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    width: 100%
+}
+
+.owl-content-a {
+    background: #fff;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+    .owl-content-a .title-owl {
+        background: #f7f9fa;
+        height: 40px;
+        line-height: 40px;
+        color: #666;
+        position: relative;
+        margin-bottom: 15px;
+        font-family: 'web_Yekan';
+        font-size: 18px;
+        display: block;
+        text-align: right
+    }
+
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.owl-carousel {
+    direction: ltr;
+    display: none;
+    width: 100%;
+    -ms-touch-action: pan-y;
+    background: #fff;
+    overflow: hidden
+}
+
+    .owl-carousel .owl-wrapper {
+        display: none;
+        position: relative;
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0)
+    }
+
+    .owl-carousel .owl-wrapper-outer.autoHeight {
+        -webkit-transition: height 500ms ease-in-out;
+        -moz-transition: height 500ms ease-in-out;
+        -ms-transition: height 500ms ease-in-out;
+        -o-transition: height 500ms ease-in-out;
+        transition: height 500ms ease-in-out
+    }
+
+    .owl-carousel .owl-item {
+        display: inline-block;
+        direction: rtl;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0)
+    }
+
+.owl-controls .owl-page, .owl-controls .owl-buttons div {
+    cursor: pointer
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move
+}
+
+.owl-theme .owl-controls {
+    text-align: center
+}
+
+    .owl-theme .owl-controls .owl-buttons div {
+        text-align: center;
+        color: #333;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        font-size: 16px
+    }
+
+        .owl-theme .owl-controls .owl-buttons div i {
+            height: 40px;
+            display: block;
+            line-height: 40px
+        }
+
+    .owl-theme .owl-controls .owl-page span.owl-numbers {
+        height: auto;
+        width: auto;
+        color: #FFF;
+        padding: 2px 10px;
+        font-size: 12px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px
+    }
+
+.owl-item.loading {
+    min-height: 150px;
+    background: url(AjaxLoader.gif) no-repeat center center
+}
+
+.owl-pagination {
+    display: none
+}
+
+.owl-content-a {
+    overflow: hidden
+}
+
+.campain-body {
+    height: auto;
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+    .campain-body h4 {
+        margin-right: 15px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .campain-body ul {
+        margin: 15px;
+    }
+
+    .campain-body li {
+        width: 30%;
+        float: right;
+        font-size: 13px;
+        clear: none;
+    }
+
+        .campain-body li i, .campain-body li svg {
+            color: #fda238;
+            margin-left: 5px;
+        }
+
+#Competitors_Show_Ads_Video_AllDataCount .active {
+    background: #FFF;
+}
+
+#Competitors_Show_Ads_Video_AllDataCount .item11 {
+    padding: 5px 5px 0 5px;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+}
+
+.shahed-video-body {
+    margin-top: 15px;
+}
+
+    .shahed-video-body i, .shahed-video-body svg {
+        color: #FC9A28;
+    }
+
+    .shahed-video-body span {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+.video-pic {
+}
+
+    .video-pic img {
+        height: 120px;
+        border-radius: 10px;
+    }
+
+.video-title {
+    line-height: 50px;
+}
+
+    .video-title i, .video-title svg {
+        color: #F66B64;
+    }
+
+    .video-title a {
+        font-size: 12px;
+        margin-right: 5px;
+        color: #000;
+        font-weight: 500;
+        max-width: 185px;
+        overflow-x: hidden;
+    }
+
+.video-detail {
+    line-height: 30px;
+}
+
+    .video-detail .NetworkName {
+        display: inline-block;
+        width: 40%;
+        font-size: 11px;
+        font-family: IranSans_fa;
+    }
+
+        .video-detail .NetworkName i, .video-detail .NetworkName svg {
+            color: #F66B64;
+            margin-left: 5px;
+        }
+
+    .video-detail .VideoDate {
+        text-align: left;
+        display: inline-block;
+        width: 60%;
+        font-size: 11px;
+        font-family: IranSans_fa;
+    }
+
+        .video-detail .VideoDate i, .video-detail .VideoDate svg {
+            color: #F66B64;
+            margin-right: 5px;
+        }
+
+#Competitors_Show_Ads_Radio_AllDataCount .active {
+    background: #FFF;
+}
+
+#Competitors_Show_Ads_Radio_AllDataCount .item11 {
+    padding: 5px 5px 0 5px;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+}
+
+.shahed-radio-body {
+    margin-top: 15px;
+}
+
+    .shahed-radio-body i, .shahed-radio-body svg {
+        color: #FC9A28;
+    }
+
+    .shahed-radio-body span {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+.radio-pic {
+}
+
+    .radio-pic img {
+        height: 120px;
+        border-radius: 10px;
+    }
+
+.radio-title {
+    line-height: 50px;
+}
+
+    .radio-title i, .radio-title svg {
+        color: #F66B64;
+    }
+
+    .radio-title a {
+        font-size: 12px;
+        margin-right: 5px;
+        color: #000;
+        font-weight: 500;
+        max-width: 185px;
+        overflow-x: hidden;
+    }
+
+.radio-detail {
+    line-height: 30px;
+}
+
+    .radio-detail .NetworkName {
+        display: inline-block;
+        width: 40%;
+        font-size: 11px;
+        font-family: IranSans_fa;
+    }
+
+        .radio-detail .NetworkName i, .radio-detail .NetworkName svg {
+            color: #F66B64;
+            margin-left: 5px;
+        }
+
+    .radio-detail .RadioDate {
+        text-align: left;
+        display: inline-block;
+        width: 60%;
+        font-size: 11px;
+        font-family: IranSans_fa;
+    }
+
+        .radio-detail .RadioDate i, .radio-detail .RadioDate svg {
+            color: #F66B64;
+            margin-right: 5px;
+        }
+
+.shahed-twitter-body {
+    margin-top: 15px;
+}
+
+    .shahed-twitter-body i, .shahed-twitter-body svg {
+        color: #FC9A28;
+    }
+
+    .shahed-twitter-body span {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+#Competitors_Show_PR_Twitter_Mohtava .active {
+    background: #FFF;
+}
+
+#Competitors_Show_PR_Twitter_Mohtava .item11 {
+    padding: 5px 5px 0 5px;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    height: 150px;
+    position: relative;
+}
+
+#Competitors_Show_PR_Twitter_Mohtava .owl-item {
+    width: 460px !important;
+}
+
+.twitter-text {
+    width: 80%;
+    float: right;
+    clear: none;
+}
+
+    .twitter-text a {
+        font-size: 13px;
+        color: #000;
+    }
+    .twitter-text a svg {
+        margin-left:3px;
+    }
+
+.twitter-icons {
+    float: left;
+    width: 19%;
+    clear: none;
+}
+
+    .twitter-icons .heart {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        font-family: 'IranSans_fa';
+        font-size: 12px;
+    }
+
+        .twitter-icons .heart i, .twitter-icons .heart svg {
+            color: #03A9F4;
+        }
+
+    .twitter-icons .retweet {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        font-family: 'IranSans_fa';
+        font-size: 12px;
+    }
+
+        .twitter-icons .retweet i, .twitter-icons .retweet svg {
+            color: #03A9F4;
+        }
+
+    .twitter-icons .comment {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        font-family: 'IranSans_fa';
+        font-size: 12px;
+    }
+
+        .twitter-icons .comment i, .twitter-icons .comment svg {
+            color: #03A9F4;
+        }
+
+.twitter-detail {
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+}
+
+    .twitter-detail .username {
+        width: 30%;
+        display: inline-block;
+        font-size: 12px;
+    }
+
+        .twitter-detail .username i, .twitter-detail .username svg {
+            color: #F66B64;
+            margin-left: 2px;
+            font-size: 14px;
+        }
+
+    .twitter-detail .keyword {
+        width: 30%;
+        display: inline-block;
+        font-size: 12px;
+    }
+
+        .twitter-detail .keyword i, .twitter-detail .keyword svg {
+            color: #F66B64;
+            margin-left: 2px;
+            font-size: 14px;
+        }
+
+    .twitter-detail .TwitterDate {
+        width: 40%;
+        display: inline-block;
+        font-size: 12px;
+        text-align: left;
+        font-family: 'IranSans_fa';
+    }
+
+        .twitter-detail .TwitterDate i, .twitter-detail .TwitterDate svg {
+            color: #F66B64;
+            margin-right: 2px;
+            font-size: 14px;
+        }
+
+#Competitors_Show_Ads_Radio_AllDataCount .owl-carousel .owl-stage, #Competitors_Show_Ads_Video_AllDataCount .owl-carousel .owl-stage {
+   /* width: 100% !important;*/
+}
+
+.content_container_preload_detail_min .owl-stage-outer {
+    width: 1110px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    /* margin: 40px !important;
+    padding: 0 !important;
+   
+    */
+}
+
+.shahed-telegram-body {
+    margin-top: 15px;
+}
+
+    .shahed-telegram-body i, .shahed-telegram-body svg {
+        color: #FC9A28;
+    }
+
+    .shahed-telegram-body span {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+#Competitors_Show_PR_Telegram_Mohtava .active {
+    background: #FFF;
+}
+
+#Competitors_Show_PR_Telegram_Mohtava .item11 {
+    padding: 5px 5px 0 5px;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    height: 150px;
+    position: relative;
+}
+
+#Competitors_Show_PR_Telegram_Mohtava .owl-item {
+    width: 520px !important;
+}
+
+.telegram-text {
+    width: 80%;
+    float: right;
+    clear: none;
+}
+
+    .telegram-text a {
+        font-size: 14px;
+        color: #000;
+    }
+    .telegram-text a svg {
+    margin-left:3px;
+    }
+
+.telegram-icons {
+    float: left;
+    width: 19%;
+    clear: none;
+}
+
+    .telegram-icons .heart {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        font-family: 'IranSans_fa';
+        font-size: 12px;
+    }
+
+        .telegram-icons .heart i, .telegram-icons .heart svg {
+            color: #03A9F4;
+        }
+
+    .telegram-icons .retweet {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        font-family: 'IranSans_fa';
+    }
+
+        .telegram-icons .retweet i, .telegram-icons .retweet svg {
+            color: #03A9F4;
+        }
+
+    .telegram-icons .comment {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        font-family: 'IranSans_fa';
+    }
+
+        .telegram-icons .comment i, .telegram-icons .comment svg {
+            color: #03A9F4;
+        }
+
+.telegram-detail {
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+}
+
+    .telegram-detail .username {
+        width: 40%;
+        display: inline-block;
+        font-size: 12px;
+    }
+
+        .telegram-detail .username i, .telegram-detail .username svg {
+            color: #F66B64;
+            margin-left: 2px;
+            font-size: 14px;
+        }
+
+    .telegram-detail .keyword {
+        width: 30%;
+        display: inline-block;
+        font-size: 12px;
+    }
+
+        .telegram-detail .keyword i, .telegram-detail .keyword svg {
+            color: #F66B64;
+            margin-left: 2px;
+            font-size: 14px;
+        }
+
+    .telegram-detail .TelegramDate {
+        width: 30%;
+        display: inline-block;
+        font-size: 12px;
+        text-align: left;
+        font-family: 'IranSans_fa';
+    }
+
+        .telegram-detail .TelegramDate i, .telegram-detail .TelegramDate svg {
+            color: #F66B64;
+            margin-right: 2px;
+            font-size: 14px;
+        }
+
+.shahed-news-bysource-body {
+    margin-top: 15px;
+}
+
+    .shahed-news-bysource-body i, .shahed-news-bysource-body svg{
+        color: #FC9A28;
+    }
+
+    .shahed-news-bysource-body span {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+.news-bysource {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+    .news-bysource .item11 {
+    }
+
+        .news-bysource .item11 .rss-icon {
+            float: right;
+            clear: none;
+            width: 30px;
+            background: #EEE;
+            line-height: 40px;
+            margin: 2.5px;
+            padding: 0 5px 0 5px;
+        }
+
+            .news-bysource .item11 .rss-icon i, .news-bysource .item11 .rss-icon svg {
+                color: #FF9800;
+            }
+
+        .news-bysource .item11 .news-text {
+            float: right;
+            clear: none;
+            width: 80%;
+            background: #EEE;
+            line-height: 40px;
+            margin: 2.5px;
+            padding: 0 5px;
+            font-size: 12px;
+        }
+
+            .news-bysource .item11 .news-text a {
+                color: #000 !important;
+            }
+
+        .news-bysource .item11 .sitetitle {
+            float: right;
+            clear: none;
+            width: 15%;
+            background: #EEE;
+            line-height: 40px;
+            margin: 2.5px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+            .news-bysource .item11 .sitetitle span {
+            }
+.containerV {
+    height: 100%;
+}
+.containerTLG {
+    height: 100%;
+}
+
+.containerTW {
+    height: 100%;
+}
+
+.containerINS {
+    height: 100%;
+}
+
+.containerNWS {
+    height: 100%;
+}
+
+#Competitors_Show_PR_Instagram_Mohtava .active {
+    background: #FFF;
+}
+
+#Competitors_Show_PR_Instagram_Mohtava .item11 {
+    padding: 0;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    height: 330px;
+    position: relative;
+}
+
+#Competitors_Show_PR_Instagram_Mohtava .owl-item {
+}
+#Competitors_Show_PR_Instagram_Mohtava .insta-image {
+
+}
+    #Competitors_Show_PR_Instagram_Mohtava .insta-image img {
+        border-radius: 10px 10px 0 0;
+    }
+
+#Competitors_Show_PR_Instagram_Mohtava .instagram-text   {
+}
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-text a {
+        font-size: 12px;
+        color: #000;
+        overflow: hidden;
+        max-width: 100%;
+        display: flex;
+        direction: rtl;
+        text-align: right;
+        margin: 0 5px;
+    }
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-text a svg {
+        margin-left:3px;
+    }
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-text i {
+    }
+#Competitors_Show_PR_Instagram_Mohtava .instagram-icons {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-icons .heart {
+        font-size: 12px;
+        font-family: IranSans_fa;
+        display: inline-block;
+        width: 50%;
+        padding: 0 5px;
+    }
+        #Competitors_Show_PR_Instagram_Mohtava .instagram-icons .heart i, #Competitors_Show_PR_Instagram_Mohtava .instagram-icons .heart svg {
+            color: #F66B64;
+        }
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-icons .InstagramDate {
+        font-size: 12px;
+        font-family: IranSans_fa;
+        display: inline-block;
+        width: 50%;
+        padding: 0 5px;
+        text-align: left;
+    }   
+        #Competitors_Show_PR_Instagram_Mohtava .instagram-icons .InstagramDate i, #Competitors_Show_PR_Instagram_Mohtava .instagram-icons .InstagramDate svg {
+            color: #F66B64;
+        }
+#Competitors_Show_PR_Instagram_Mohtava .instagram-detail {
+    position: absolute;
+    top: 0;
+    color: #FFF;
+    font-size: 12px;
+    font-family: IranSans_fa;
+    background: #0007;
+    width: 100%;
+    line-height: 40px;
+    border-radius: 10px 10px 0 0;
+    height: 40px;
+}
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-detail .username {
+        display: inline-block;
+        width: 60%;
+        font-size: 10px;
+        padding: 0 3px;
+        text-align: right;
+        overflow-x: hidden; 
+    }
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-detail .keyword {
+        display: inline-block;
+        width: 39%;
+        font-size: 11px;
+        padding: 0 2px;
+        text-align: left;
+        overflow: hidden;
+    }
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-detail .username i {
+    }
+
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-detail keyword i {
+    }
+    #Competitors_Show_PR_Instagram_Mohtava .instagram-detail span {
+        
+    }
+.shahed-instagram-body {
+    margin-top: 15px;
+}
+
+    .shahed-instagram-body i, .shahed-instagram-body svg {
+        color: #FC9A28;
+    }
+
+    .shahed-instagram-body span {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+.instagram-close {
+    float: left;
+    position: relative;
+    left: 38px;
+    top: 38px;
+    color: #ec1919;
+    cursor: pointer;
+    z-index: 99999999;
+}
+.twitter-close {
+    float: left;
+    position: relative;
+    left: 38px;
+    top: 38px;
+    color: #ec1919;
+    cursor: pointer;
+    z-index: 99999999;
+}
+.telegram-close {
+    float: left;
+    position: relative;
+    left: 38px;
+    top: 38px;
+    color: #ec1919;
+    cursor: pointer;
+    z-index: 99999999;
+}
+.newsbySource-close {
+    float: left;
+    position: relative;
+    left: 38px;
+    top: 38px;
+    color: #ec1919;
+    cursor: pointer;
+    z-index: 99999999;
+}
+.video-close {
+    float: left;
+    position: relative;
+    left: 38px;
+    top: 38px;
+    color: #ec1919;
+    cursor: pointer;
+    z-index: 99999999;
+}
+.radio-close {
+    float: left;
+    position: relative;
+    left: 38px;
+    top: 38px;
+    color: #ec1919;
+    cursor: pointer;
+    z-index: 99999999;
+}
+.campain-close {
+    float: left;
+    position: relative;
+    left: 38px;
+    top: 38px;
+    color: #ec1919;
+    cursor: pointer;
+    z-index: 99999999;
+}
+.heightAbs {
+    height:450px;
+}

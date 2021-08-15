@@ -1,0 +1,378 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteV2.master.cs" Inherits="P_Art.Pages.P_Art.MasterPages.SiteV2" %>
+
+
+<html>
+<head runat="server">
+    <title>پایش اخبار (سرویس پی.آرت)
+    </title>
+
+    <link type="text/css" rel="stylesheet" href="/Pages/P-Art/Styles/MainStyle.css?ver=10.11" />
+    <link type="text/css" rel="stylesheet" href="/Pages/P-Art/Styles/jquery-ui.css" />
+    <script src='/Pages/P-Art/Scripts/jquery.min.js' type="text/javascript"></script>
+    <%-- <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>--%>
+    <script src='/Pages/P-Art/Scripts/jquery-ui.min.js' type="text/javascript"></script>
+    <script src='/Pages/P-Art/Scripts/jquery.easing.1.3.js' type="text/javascript"></script>
+
+
+    <%--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>--%>
+    <%--<script src="https://code.jquery.com/jquery-migrate-1.4.1.js" type="text/javascript"></script>--%>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <%--<script src='/Pages/P-Art/Scripts/jquery.easing.1.3.js' type="text/javascript"></script>--%>
+    <script src='/Pages/P-Art/Scripts/AppScripts.js?ver=13.0' type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="/Pages/P-Art/Styles/SiteMaster.css" />
+   
+
+    <!--[if IE 9]>
+         <script src="http://p5xcdn.com/common/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <form id="MainFrom" runat="server">
+        <header>
+            <div class="topBar">
+                <div id="primaryHeader">
+
+
+                    <nav id="header-links">
+                        <ul>
+
+                            <li><a href="/about">درباره ما</a>
+
+                            </li>
+                            <li class="Seprator">•</li>
+                            <li><a href="/contact">تماس با ما</a></li>
+                            <li class="Seprator">•</li>
+
+
+                        </ul>
+                    </nav>
+
+                <%--    <nav class="MainNavHeader">
+                        <ul>
+
+                            <li class="item">
+                                <a href="~/News/Latest/" runat="server">اخبار</a>
+                            </li>
+
+                            <li class="item">
+                                <a href="~/Gallery" runat="server">گالری تصاویر</a>
+                            </li>
+                            <li class="item">
+                                <a href="~/BreakNews" runat="server" id="btn_BoridehJarayed">بریده جراید</a>
+                            </li>
+                            <li class="item">
+                                <a href="~/Movies/Latest/" runat="server">ویدیو</a>
+                            </li>
+                            <li class="item">
+                                <a href="~/Radio/Latest/" runat="server">رادیو</a>
+                            </li>
+                            <li class="item">
+                                <a class="btn_tv" href="#showtv">تلویزیون پایش</a>
+                            </li>
+                            <li class="item">
+                                <a class="item" href="/addnews" runat="server">ثبت خبر</a>
+                            </li>
+                        </ul>
+
+                    </nav>--%>
+
+                </div>
+            </div>
+
+        </header>
+
+        <section class="container">
+
+            <header id="headerBox" runat="server">
+                <div id="logoBox" runat="server">
+                    <a href="/Pages/P-Art/Pages/AfterLogin.aspx">
+                    <img id="img_logo" src="../Images/project-logo.png" runat="server" alt="خانه" />
+                        </a>
+                </div>
+                <div id="namayandeh_info" runat="server">
+
+                    <table>
+                        <tr>
+                            <td rowspan="2">
+                                <img id="namayandeh_pic" src="~/Pages/P-Art/Images/project-logo.png" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                    <span id="namayandeh_name" runat="server">علی اردشیر لاریجانی
+                        <br />
+                        قم
+                    </span>
+                </div>
+                <div id="setting">
+                    <ul>
+                        <li><a href="#">تغییر رمز</a></li>
+                        <li><a href="#">گزارشات</a></li>
+                        <li>
+                            <asp:LinkButton ID="btn_Exit" runat="server" OnClick="btn_Exit_Click">خروج از سیستم</asp:LinkButton>
+                        </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <section class="wrapper">
+                <div id="SwitchSelect" class="SwitchSelect" runat="server">
+                    <asp:DropDownList ID="Cmb_Switch" runat="server">
+                    </asp:DropDownList>
+                </div>
+<%--                <nav class="MainNav">
+                    <ul>
+
+                        <li class="currItem">
+                            <a href="~/News/Latest/" runat="server">اخبار</a>
+                        </li>
+
+                        <li class="item">
+                            <a href="~/Gallery" runat="server">گالری تصاویر</a>
+                        </li>
+                        <li class="item">
+                            <a href="~/BreakNews" runat="server" id="btn_BoridehJarayed2">بریده جراید</a>
+                        </li>
+                        <li class="item">
+                            <a href="~/Movies/Latest/" runat="server">ویدیو</a>
+                        </li>
+                        <li class="item">
+                            <a href="~/Radio/Latest/" runat="server">رادیو</a>
+                        </li>
+                        <li class="item">
+                            <a class="btn_tv" href="#showtv">تلویزیون پایش</a>
+                        </li>
+                        <asp:PlaceHolder runat="server" Visible="false" ID="pc_Keywords">
+                            <li class="item">
+                                <a class="btn_Keywords" href="/keywords">کلیدواژه ها</a>
+                            </li>
+                        </asp:PlaceHolder>
+                        <asp:PlaceHolder runat="server" Visible="false" ID="pc_SMSPanel">
+
+                            <li class="item">
+                                <a class="btn_smspanel" href="/Pages/P-Art/Pages/SmsPanel.aspx">سرویس پیام کوتاه</a>
+                            </li>
+                        </asp:PlaceHolder>
+
+                        <asp:PlaceHolder runat="server" Visible="false" ID="pc_UsersPanel">
+                            <li class="item">
+                                <a class="btn_smspanel" href="/Pages/P-Art/Pages/UsersManagment.aspx">مدیریت کاربران سیستم</a>
+                            </li>
+                        </asp:PlaceHolder>
+                        <%--                    <li class="socialKey">
+                            <a  href="/Pages/P-Art/Pages/SocialKeywords.aspx">کلیدواژه توییتر</a>
+                        </li>
+                        <li class="twit">
+                            <i class="fa fa-twitter" ></i>
+                            <a  href="/Pages/P-Art/Pages/Social.aspx">توییتر</a>
+                        </li>
+                        <li class="socialKey">
+                            <a  href="/Pages/P-Art/Pages/TelegramKeywords.aspx">کلیدواژه تلگرام</a>
+                        </li>
+                        <li class="twit">
+                            <i class="fa fa-telegram" ></i>
+                            <a  href="/Pages/P-Art/Pages/Telegram.aspx">تلگرام</a>
+                        </li>--%>
+                   <%-- </ul>
+                    <div class="clear"></div>
+
+                </nav>--%>
+                <div>
+                    <div class="modalTvSetting">
+                        <div class="modalHeader">
+                            <h4>تنظیمات تلویزیون پایش</h4>
+                        </div>
+                        <div class="modalContainer clearfix">
+                            <input value="انتخاب موارد" type="checkbox" id="chooseAllKeys" class="chooseAllKeys"><label for="chooseAllKeys">انتخاب موارد</label>
+                            <div>
+                                <asp:RadioButtonList runat="server" RepeatDirection="Horizontal" ID="rbtnTvOption">
+                                    <asp:ListItem Text="نمایش تمامی اخبار" Value="1" Enabled="true" Selected="True"></asp:ListItem>
+                                    <asp:ListItem Text="نمایش اخبار انتخاب شده" Value="2" Enabled="true"></asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                            <div style="max-height: 420px; overflow-y: scroll;">
+                                <asp:CheckBoxList runat="server" ID="chbTvKeyList">
+                                </asp:CheckBoxList>
+                            </div>
+
+                        </div>
+                        <div class="modalFooter">
+                            <a id="btnShowTv" href="#regModel" class="regBtn">
+                                <span>نمایش</span>
+                            </a>
+                            <a id="btnCancellTv" href="#closeModal" class="cancelBtn">
+                                <span>انصراف</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </section>
+        </section>
+        <div id="model_Tv">
+            <a id="btn_close_tv" href="#">
+                <img runat="server" src="~/Pages/P-Art/Images/power.png" />
+            </a>
+
+
+            <div id="lblslogan">
+                <p>
+                    <img runat="server" id="img_panel_logo" src="~/Pages/P-Art/Images/kbank.png?v2" />
+                    <br />
+                    <span>لطفا چند لحظه صبر کنید
+                    </span>
+                </p>
+            </div>
+
+            <div class="box-News">
+                <img id="img1" src="" />
+                <p id="tv-lblNewsSource">
+                </p>
+                <p id="tv-lblNewsTitle" style="font-family: 'BTitr'">
+                </p>
+                <p id="tv-lblNewsLead">
+                </p>
+            </div>
+            <%-- <div class="box-News" style="display:none">
+                <img id="img2" src="" />
+                <p id="tv-lblNewsSource2">
+                </p>
+                <p id="tv-lblNewsTitle2">
+                </p>
+                <p id="tv-lblNewsLead2">
+                </p>
+            </div>--%>
+        </div>
+
+        <div class="loader_box">
+            <img src="/Pages/P-Art/images/loading.gif" />
+
+        </div>
+    </form>
+    <script type="text/javascript">
+
+        $(".MainNavHeader ul li").removeClass("currItem");
+        $(".MainNav ul li").removeClass("currItem");
+
+        if (window.location.pathname.toString().toLowerCase().indexOf("shownews") > 0) {
+            $(".MainNavHeader ul li:nth-child(1)").addClass("currItem");
+            $(".MainNav ul li:nth-child(1)").addClass("currItem");
+        }
+        else if (window.location.pathname.toString().toLowerCase().indexOf("news/latest") > 0) {
+            $(".MainNavHeader ul li:nth-child(1)").addClass("currItem");
+            $(".MainNav ul li:nth-child(1)").addClass("currItem");
+        }
+        else if (window.location.pathname.toString().toLowerCase().indexOf("news/export") > 0) {
+            $(".MainNavHeader ul li:nth-child(1)").addClass("currItem");
+            $(".MainNav ul li:nth-child(1)").addClass("currItem");
+        }
+        else if (window.location.pathname.toString().toLowerCase().indexOf("gallery") > 0) {
+            $(".MainNavHeader ul li:nth-child(2)").addClass("currItem");
+            $(".MainNav ul li:nth-child(2)").addClass("currItem");
+
+        }
+        else if (window.location.pathname.toString().toLowerCase().indexOf("breaknews") > 0) {
+            $(".MainNavHeader ul li:nth-child(3)").addClass("currItem");
+            $(".MainNav ul li:nth-child(3)").addClass("currItem");
+
+        }
+        else if (window.location.pathname.toString().toLowerCase().indexOf("movies") > 0) {
+            $(".MainNavHeader ul li:nth-child(4)").addClass("currItem");
+            $(".MainNav ul li:nth-child(4)").addClass("currItem");
+
+        }
+        $(window).ready(function () {
+
+            $('.onoffswitch').each(function (e) {
+                var $this = $(this);
+                var $thisInput = $this.find('input');
+                var $thisLabel = $this.find('label');
+
+                $thisInput.addClass('onoffswitch-checkbox');
+                $thisLabel.addClass('onoffswitch-label');
+            });
+        });
+
+        $('.btn_tv').on('click', function (e) {
+
+            // ShowShadowModal();
+            ShowTvSettingModal();
+        });
+        $('.modalTvSetting .cancelBtn').on('click', function (e) {
+
+            //  CloseShadowModal();
+            CloseTvSettingModal();
+        });
+
+        var selectAllKeys = false;
+        $('.chooseAllKeys').click(function () {
+
+            if (selectAllKeys) {
+                $(".onoffswitch input").attr('checked', false);
+                selectAllKeys = false;
+            }
+            else {
+                $(".onoffswitch input").attr('checked', true);
+                selectAllKeys = true;
+
+            }
+
+        });
+        function CloseShadowModal() {
+            $('.shadowModal').fadeOut();
+        }
+        function ShowShadowModal() {
+            $('.shadowModal').fadeIn();
+        }
+        function ShowTvSettingModal() {
+            $('.modalTvSetting').slideDown();
+        }
+        function CloseTvSettingModal() {
+            $('.modalTvSetting').slideUp();
+        }
+
+    </script>
+    <footer>
+
+        <div id="slogan">
+            <span>با حمایت سیستم پایش اخبار :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            </span>
+            <br />
+            <br />
+            <br />
+            <img src="~/Pages/P-Art/Images/project-logo-mini.png" id="logo_mini" runat="server" />
+
+            <p id="footer_body" runat="server">
+                <span>
+
+                    <img src="~/Pages/P-Art/Images/copyright.png" runat="server" />
+                    پی آرت
+1390-1391
+                </span>
+                <br />
+                تمامی حقوق این وب سایت شامل مطالب،محتوا و تصاویر تحت لیسانس سیستم پایش اخبار و متعلق
+                به پی آرت است.
+                پی آرت یک جستجوگر و موتور هوشمند خبری است که با استفاده از جدیدترین و پیشرفته ترین
+                روش های هوش مصنوعی اخبار حوزه فرهنگی(سینما،موسیقی،تئاتر)را جمع آوری و طبقه بندی
+                می کند.
+                <br />
+                هرگونه استفاده از محتوای نوشتاری و چند رسانه ای این سایت یا باز نشر یا گزارش گیری
+                مکتوب تنها با
+                ذکر منبع و درج لوگو مجاز است.
+پی آرت یک Feed Reader نیست وبرای دریافت و جمع آوری اخبار به فناوری آر اس اس وابسته نمی باشد.پی آرت
+                وابسته به هیچ حزب وگروه سیاسی نیست.هیچگونه خبری توسط این سرویس ایجاد نمی شود ومتن
+                خبرهای دریافتی به هیچ عنوان عوض نمی شود.امکان هیچ دخالت انسانی در دریافت ،طبقه بندی،چینش
+                وپردازش اخبار وجود ندارد.
+برای برقراری ارتباط شما می توانید با ایمیل            در ارتباط باشید.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

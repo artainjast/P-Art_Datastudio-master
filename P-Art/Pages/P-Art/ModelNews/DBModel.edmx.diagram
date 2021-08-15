@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fe1b8946e8e14abba71a61f81a4775da" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Accesses" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Ads" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_AdsRoll" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_AgenceMembers" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Agences" Width="1.5" PointX="0.75" PointY="12.875" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_AllNews" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Attachments" Width="1.5" PointX="7.5" PointY="8.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BilboardLog" Width="1.5" PointX="5.75" PointY="15.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Bilboards" Width="1.5" PointX="7.75" PointY="15.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BiReports" Width="1.5" PointX="12.75" PointY="0.875" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BiSearchs" Width="1.5" PointX="7.75" PointY="20.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Boards" Width="1.5" PointX="12.75" PointY="21.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanArchive" Width="1.5" PointX="14.75" PointY="21.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanArchiveMedia" Width="1.5" PointX="21.75" PointY="20.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanAutomation" Width="1.5" PointX="23" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanFiles" Width="1.5" PointX="20.75" PointY="6" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanHistory" Width="1.5" PointX="22.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanLog" Width="1.5" PointX="22.75" PointY="13.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Campains" Width="1.5" PointX="16.75" PointY="23.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Comments" Width="1.5" PointX="3" PointY="24.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_CreaditHistory" Width="1.5" PointX="3" PointY="17.125" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Currency" Width="1.5" PointX="23.75" PointY="20.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_CurrencyStats" Width="1.5" PointX="21.75" PointY="23.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_DataCenterNews" Width="1.5" PointX="23.75" PointY="23.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_District" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_DownloadHistory" Width="1.5" PointX="5.75" PointY="24.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Errors" Width="1.5" PointX="7.75" PointY="24.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Events" Width="1.5" PointX="18" PointY="1.5" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_ExportExcelKeywords" Width="1.5" PointX="9.75" PointY="24.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Gallery" Width="1.5" PointX="10.75" PointY="20.625" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_GolrangUser" Width="1.5" PointX="24.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_GolrangUserLog" Width="1.5" PointX="11.75" PointY="24.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_GoogleSEApiAccounts" Width="1.5" PointX="24.75" PointY="13.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_GoogleSEApiKeywords" Width="1.5" PointX="25.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_GoogleSEApiNews" Width="1.5" PointX="25.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Highlight" Width="1.5" PointX="24.75" PointY="17.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Inbox" Width="1.5" PointX="25.75" PointY="20.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_InstagramKeywords" Width="1.5" PointX="16" PointY="8.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_InstagramPosts" Width="1.5" PointX="18.25" PointY="7" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Jarayed" Width="1.5" PointX="15" PointY="16.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_KeywordEvents" Width="1.5" PointX="23" PointY="1.5" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Keywords" Width="1.5" PointX="20.75" PointY="1" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_LiveNews" Width="1.5" PointX="25.75" PointY="23.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Log_Login" Width="1.5" PointX="5.25" PointY="11.875" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Log_News" Width="1.5" PointX="26.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MasterNewsTag" Width="1.5" PointX="26.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKit_BrandArchives" Width="1.5" PointX="16.75" PointY="26.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKit_BrandChilds" Width="1.5" PointX="27.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKit_Brands" Width="1.5" PointX="27.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKit_Groups" Width="1.5" PointX="5.75" PointY="27.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKitAlarm" Width="1.5" PointX="11.75" PointY="27.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediakitCampain" Width="1.5" PointX="27.75" PointY="18.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKitChart" Width="1.5" PointX="18.75" PointY="27.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKitChartGroup" Width="1.5" PointX="27.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediaKitLog" Width="1.5" PointX="20.75" PointY="27.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediakitReport" Width="1.5" PointX="27.75" PointY="22.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MediakitUser" Width="1.5" PointX="27.75" PointY="25.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MemberNewsSaveStore" Width="1.5" PointX="0.75" PointY="28.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MemberNewsSelectionForBultan" Width="1.5" PointX="2.75" PointY="28.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MemberParminSites" Width="1.5" PointX="7.75" PointY="28.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MemberValidIP" Width="1.5" PointX="28.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_MobieDevice" Width="1.5" PointX="28.75" PointY="12.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Movies" Width="1.5" PointX="19.75" PointY="18.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_News" Width="1.5" PointX="13.75" PointY="28.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_News_Rss" Width="1.5" PointX="29.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_NewsGroup" Width="1.5" PointX="13.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_NewsNew" Width="1.5" PointX="15.75" PointY="29.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_NewsRelate" Width="1.5" PointX="29.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_NewsTypes" Width="1.5" PointX="17.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Nimta" Width="1.5" PointX="29.75" PointY="18.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Online" Width="1.5" PointX="22.75" PointY="29.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_ParminCategory" Width="1.5" PointX="29.75" PointY="23.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_ParminProduct" Width="1.5" PointX="29.75" PointY="26.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_ParminSocialAccounts" Width="1.5" PointX="29.75" PointY="29.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_ParminUser" Width="1.5" PointX="4.75" PointY="30.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_PayeshTopBrands" Width="1.5" PointX="30.75" PointY="8.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_PayeshTopBrandsColor" Width="1.5" PointX="30.75" PointY="12.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_PhoneBook" Width="1.5" PointX="31.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_ProcessWork" Width="1.5" PointX="0.75" PointY="31.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Radio" Width="1.5" PointX="17.75" PointY="15.125" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_AgenceDistrict" Width="1.5" PointX="3" PointY="14" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_Gallery" Width="1.5" PointX="13" PointY="9.125" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_MovieDistrict" Width="1.5" PointX="22" PointY="17.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_MovieParminPanel" Width="1.5" PointX="30.75" PointY="15.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_NewsDistrict" Width="1.5" PointX="31.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_NewsParminPanel" Width="1.5" PointX="6.75" PointY="31.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_NewsParminPanelNew" Width="1.5" PointX="8.75" PointY="31.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_RadioDistrict" Width="1.5" PointX="20" PointY="14.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Relation_RadioParminPanel" Width="1.5" PointX="10.75" PointY="31.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Rss" Width="1.5" PointX="15" PointY="13.25" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Rss_Result" Width="1.5" PointX="31.75" PointY="18.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Rss_Result_TNews" Width="1.5" PointX="31.75" PointY="22.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_RssKeywords" Width="1.5" PointX="31.75" PointY="26.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_RssPage" Width="1.5" PointX="32.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_ShahedCodeRegLog" Width="1.5" PointX="32.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SiteGroups" Width="1.5" PointX="32.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Sites" Width="1.5" PointX="12.75" PointY="14.625" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SmsHistory" Width="1.5" PointX="17.75" PointY="32.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SmsInput" Width="1.5" PointX="19.75" PointY="32.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SmsNotSend" Width="1.5" PointX="31.75" PointY="32.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SocialMediaBultan" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SocialMediaBultanPost" Width="1.5" PointX="33.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SocialMediaKey" Width="1.5" PointX="33.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SocialMediaMember" Width="1.5" PointX="33.75" PointY="17.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SocialMediaNewsRate" Width="1.5" PointX="33.75" PointY="20.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SocialMediaPost" Width="1.5" PointX="33.75" PointY="23.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_SocialMediaUser" Width="1.5" PointX="27.75" PointY="33.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Tabaghat" Width="1.5" PointX="33.75" PointY="29.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Tablet_Alarm" Width="1.5" PointX="33.75" PointY="32.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Tablet_Device" Width="1.5" PointX="2.75" PointY="34.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Telegram_Channels" Width="1.5" PointX="34.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Telegram_MessageMedias" Width="1.5" PointX="34.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Telegram_Messages" Width="1.5" PointX="10.75" PointY="34.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Telegram_SearchKeyWords" Width="1.5" PointX="34.75" PointY="13.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Telegram_SenderTypes" Width="1.5" PointX="35.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Templates" Width="1.5" PointX="35.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Tickets" Width="1.5" PointX="4.75" PointY="35.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TimeLineReportArchives" Width="1.5" PointX="6.75" PointY="35.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TLPChannels" Width="1.5" PointX="35.75" PointY="17.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TLPKeywords" Width="1.5" PointX="19.75" PointY="35.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TLPMessage" Width="1.5" PointX="35.75" PointY="21.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TNews" Width="1.5" PointX="21.75" PointY="35.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TNewsKey" Width="1.5" PointX="35.75" PointY="27.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Topics" Width="1.5" PointX="5.25" PointY="8" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TopicUsers" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TvNews" Width="1.5" PointX="35.75" PointY="30.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TvRadioList" Width="1.5" PointX="35.75" PointY="33.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TwitterAcount" Width="1.5" PointX="36.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TwitterKeywords" Width="1.5" PointX="36.75" PointY="11.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_TwitterPost" Width="1.5" PointX="23.75" PointY="36.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_UserJobLog" Width="1.5" PointX="29.75" PointY="36.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_UserjobLogMsg" Width="1.5" PointX="31.75" PointY="36.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_UserParminLog" Width="1.5" PointX="33.75" PointY="36.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Users" Width="1.5" PointX="15.75" PointY="1" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Visit" Width="1.5" PointX="35.75" PointY="36.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_VisitHistory" Width="1.5" PointX="3" PointY="21.125" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Dictionary" Width="1.5" PointX="37.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Rate" Width="1.5" PointX="8.25" PointY="12.125" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.AllSitesView" Width="1.5" PointX="37.75" PointY="15.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DataCenterNewsList" Width="1.5" PointX="37.75" PointY="20.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DataCenterNewsListFromFiveDaysAgo" Width="1.5" PointX="37.75" PointY="28.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DataCenterNewsListFromOneMonthAgo" Width="1.5" PointX="37.75" PointY="36.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DataCenterNewsListFromTenDaysAgo" Width="1.5" PointX="0.75" PointY="38.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DataCenterNewsListFromThreeMonthAgo" Width="1.5" PointX="38.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DataCenterNewsListFromYesterday" Width="1.5" PointX="2.75" PointY="39.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DataCenterNewsListToday" Width="1.5" PointX="8.75" PointY="39.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DomesticNewsFromFiveDaysAgoView" Width="1.5" PointX="10.75" PointY="39.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DomesticNewsFromOneMonthAgoView" Width="1.5" PointX="39.75" PointY="11.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DomesticNewsFromTenDaysAgoView" Width="1.5" PointX="15.75" PointY="39.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DomesticNewsFromThreeMonthAgoView" Width="1.5" PointX="39.75" PointY="19.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DomesticNewsFromTwoDaysAgoView" Width="1.5" PointX="25.75" PointY="39.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DomesticNewsTodayView" Width="1.5" PointX="39.75" PointY="27.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.DomesticNewsView" Width="1.5" PointX="33.75" PointY="39.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.ForeignNewsFromOneMonthAgoView" Width="1.5" PointX="39.75" PointY="35.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.ForeignNewsTodayView" Width="1.5" PointX="40.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.ForeignNewsView" Width="1.5" PointX="17.75" PointY="40.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.LiveTvNewsListView" Width="1.5" PointX="27.75" PointY="40.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.NewMediaInfluencedNewsEconomyView" Width="1.5" PointX="29.75" PointY="40.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.RssKeywordsView" Width="1.5" PointX="4.75" PointY="41.75" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Agence_AgenceID" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Log_Login_Tbl_AgenceMembers" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Rate_Tbl_AgenceMembers" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Topics_Tbl_Users" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_TopicUsers_Tbl_AgenceMembers" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Comments_Tbl_Agences" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_CreaditHistory_Tbl_CreaditHistory" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Rate_Tbl_Agences" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_AgenceDistrict_Tbl_Agences1" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_VisitHistory_Tbl_VisitHistory" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Attachments_Tbl_Attachments" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_BultanAutomation_Tbl_BultanFiles" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Comments_Tbl_Comments" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_District_Tbl_District" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_AgenceDistrict_Tbl_District" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_MovieDistrict_Tbl_District" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_RadioDistrict_Tbl_District" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Events_Tbl_Users" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Gallery_Tbl_Gallery" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_Gallery_Tbl_Relation_Gallery" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_InstagramKeywords_Tbl_NewsGroup" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_InstagramPosts_Tbl_InstagramKeywords" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Jarayed_Tbl_Sites" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_KeywordEvents_Tbl_Keywords" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_MovieDistrict_Tbl_Relation_MovieDistrict" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_RadioDistrict_Tbl_Radio" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Rss_Tbl_Sites" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_SocialMediaBultan_Tbl_SocialMediaBultan" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_Parmin" Width="1.5" PointX="10.25" PointY="0.75" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_InstagramKeywords_Tbl_Parmin" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_InstagramPosts_Tbl_Parmin" />
+        <AssociationConnector Association="DB_NewsCenterModel.FK_Tbl_Relation_Gallery_Tbl_Parmin" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.v_TLP_Messages" Width="1.5" PointX="42.375" PointY="8.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanSettings" Width="1.5" PointX="42.375" PointY="14.75" />
+        <EntityTypeShape EntityType="DB_NewsCenterModel.Tbl_BultanArchiveFeatures" Width="1.5" PointX="42.375" PointY="17.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

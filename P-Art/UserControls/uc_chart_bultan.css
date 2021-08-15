@@ -1,0 +1,614 @@
+﻿#mainSection {
+    direction: ltr;
+}
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Bold.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Medium.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_UltraLight.ttf') format('ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Light.eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum)_Light.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum)_Light.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum)_Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IranSans_fa';
+    src: url('/styles/fonts/IRANSansWeb(FaNum).eot');
+    src: url('/styles/fonts/IRANSansWeb(FaNum).eot?#iefix') format('eot'), /* IE6–8 */
+    url('/styles/fonts/IRANSansWeb(FaNum).woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/styles/fonts/IRANSansWeb(FaNum).woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/styles/fonts/IRANSansWeb(FaNum).ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.PanelContentArea {
+    background: #f9fafb;
+}
+
+.sidebarItem {
+    box-sizing: content-box;
+}
+
+.filterRow, .chartRow {
+    margin-top: 20px;
+    max-width: initial;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.chartRowW {
+    max-width: initial;
+}
+
+.social_all_count {
+    background: #fff;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px #ccc;
+}
+
+    .social_all_count .social_all {
+        /*border-left: 1px solid #ddd;*/
+        height: 80px;
+        display: inline-block;
+        width: 18%;
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+    }
+
+        .social_all_count .social_all:last-child:before {
+            border-left: none;
+            display: none;
+        }
+
+        .social_all_count .social_all .title {
+            position: absolute;
+            top: 4px;
+            right: 10px;
+            font-size: 11px;
+        }
+
+        .social_all_count .social_all .count {
+            position: absolute;
+            top: 40px;
+            left: 70%;
+            border-bottom: 1px solid #ccc;
+            font-size:20px;
+        }
+
+        .social_all_count .social_all .sidebarIcon {
+            position: absolute;
+            top: 25px;
+            left: 10px;
+        }
+
+            .social_all_count .social_all .sidebarIcon i {
+                font-size: 3.5rem;
+            }
+
+        .social_all_count .social_all:before {
+            content: "";
+            display: block;
+            height: 96%;
+            width: 1px;
+            position: absolute;
+            left: 0px;
+            top: 7%;
+            background: #dedede;
+        }
+
+.textbox {
+    margin-left: 10px;
+    width: 145px;
+}
+
+.hasDatepicker {
+    width: 110px;
+}
+
+.btn-danger {
+    width: 24%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+
+#btn_ShowNews {
+    max-width: 100px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+.btn-danger.blur {
+    opacity: 0.5;
+}
+
+.btn-group {
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .btn-group .btn-danger {
+    }
+
+
+
+
+
+.table {
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table td, .table th {
+        padding: .75rem;
+        vertical-align: top;
+        text-align: center;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table .thead-dark th {
+        color: #fff;
+        background-color: #212529;
+        border-color: #32383e;
+    }
+
+    .table tbody, .table tbody tr, .table tbody tr td {
+        z-index: 99999;
+    }
+
+.topChannels {
+}
+
+    .topChannels h3 {
+        margin: 10px auto;
+    }
+
+
+
+
+
+
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.content_container_preload {
+    min-height: 300px;
+    height: auto;
+    position: relative;
+}
+
+.content_container_preload_min {
+    min-height: 380px;
+    height: auto;
+    max-height: 700px;
+    position: relative;
+}
+
+.content_container_preload:before {
+    content: "";
+    position: absolute;
+    left: 40%;
+    top: 16%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingPaging.gif);
+    width: 190px;
+    height: 190px;
+}
+
+.content_container_preload_min:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    z-index: 99;
+    background: url(/Pages/P-Art/Images/loadingPaging.gif);
+    width: 190px;
+    height: 190px;
+}
+
+.highcharts-container {
+    z-index: 999 !important;
+}
+
+.all_rates {
+    height: 100px;
+}
+
+    .all_rates .title {
+        position: absolute;
+        top: 8px;
+        right: 24px;
+        font-size: 10px;
+    }
+
+    .all_rates .count {
+        position: absolute;
+        top: 50px;
+        left: 10%;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .all_rates .arrow {
+        position: absolute;
+        top: 50px;
+        right: 8%;
+        display: none;
+    }
+
+    .all_rates .arrow_zero {
+        position: absolute;
+        top: 50px;
+        /*display:none;*/
+        right: 20%;
+    }
+
+.highcharts-figure {
+    box-shadow: 1px 1px 6px #ccc;
+    border-radius: 4px;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    max-height: 500px;
+}
+
+.highcharts-figure, .highcharts-data-table table {
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+.highcharts-title, tspan, .highcharts-label, .highcharts-label b, .highcharts-label span, .count, text, rect, .table td, .table th, .tweet-time {
+    font-family: 'IranSans_fa',tahoma !important;
+}
+#top-twitter {
+    padding-left: 20px;
+    direction: ltr
+}
+
+.twitter-post {
+    direction: ltr;
+    padding: 10px 15px;
+}
+
+    .twitter-post h2 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        padding: 5px;
+        border-bottom: 1px solid #333;
+    }
+
+    .twitter-post header {
+        text-align: left;
+        position: relative;
+    }
+
+    .twitter-post .tweet-pic {
+        display: inline-block;
+        text-align: left;
+    }
+
+        .twitter-post .tweet-pic a {
+            display: block;
+        }
+
+            .twitter-post .tweet-pic a img {
+                border-radius: 50%;
+                width: 96px;
+                height: 96px;
+            }
+
+    .twitter-post .tweet-user {
+        display: inline-block;
+        text-align: left;
+        /* height: 100px; */
+        position: absolute;
+        top: 20px;
+        left: 115px;
+    }
+
+        .twitter-post .tweet-user span {
+            display: block;
+            line-height: 1.3125;
+            color: #111;
+            font-weight: bold;
+        }
+
+        .twitter-post .tweet-user abbr {
+            display: block;
+            color: #999;
+        }
+
+    .twitter-post figure {
+    }
+
+    .twitter-post .tweet-post {
+        text-align: justify;
+        direction: rtl;
+    }
+
+    .twitter-post footer {
+    }
+
+    .twitter-post .tweet-time {
+        text-align: left;
+        margin-top: 5px;
+        font-size: 0.9rem;
+        color: #999;
+    }
+
+    .twitter-post .tweet-feedback {
+        border-top-color: rgb(235, 238, 240);
+        border-top-style: solid;
+        border-top-width: 1px;
+        padding: 6px 0;
+        margin-top: 10px;
+        text-align: left;
+        border-bottom-color: rgb(235, 238, 240);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
+
+        .twitter-post .tweet-feedback span {
+            color: #111;
+            font-weight: bold;
+        }
+
+        .twitter-post .tweet-feedback abbr {
+            font-size: 0.9rem;
+            color: #999;
+            margin-left: 5px;
+            margin-right: 15px;
+        }
+
+    .twitter-post .tweet-media {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+        .twitter-post .tweet-media img {
+            max-width: 80%;
+            max-height: 400px;
+        }
+
+.bx-wrapper {
+    margin-bottom: 0;
+}
+
+    .bx-wrapper .bx-controls-direction a {
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        outline: 0;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999px;
+        z-index: 9999;
+    }
+
+    .bx-wrapper .bx-prev {
+        left: -22px;
+    }
+
+    .bx-wrapper .bx-next {
+        margin-top: 10px !important;
+        left: -22px;
+        right: auto;
+    }
+
+tspan.highcharts-text-outline {
+    fill: #fff;
+}
+
+.slidePaging_next, .slidePaging_prev {
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    display: inline-block;
+    display: none;
+    cursor: pointer;
+}
+
+.slidePaging_next {
+    background: url('/Styles/img/slide_next.png') no-repeat;
+    left: -21px;
+    top: 27%;
+}
+
+.slidePaging_prev {
+    background: url('/Styles/img/slide_prev.png') no-repeat;
+    left: -21px;
+    top: 46%;
+}
+
+
+
+
+
+.map-point {
+    fill: red;
+}
+
+
+.heyo:hover {
+    fill: #CC2929;
+    transition: all .3s ease-in;
+}
+
+.enabled {
+    fill: #21669E;
+    cursor: pointer
+}
+
+.description {
+    pointer-events: none;
+    position: fixed;
+    font-size: 18px;
+    text-align: center;
+    background: white;
+    padding: 10px 15px;
+    z-index: 5;
+    /* height: 30px; */
+    line-height: 30px;
+    margin: 0 auto;
+    color: #21669e;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #eee;
+    transform: translateX(-50%);
+    display: none;
+    direction: rtl;
+    font-family: IranSans,B Mitra,Tahoma;
+}
+
+    .description.active {
+        display: block
+    }
+
+    .description:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        margin-left: -10px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+    }
+
+.svg-wrapper svg {
+    display: block;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-height: 400px;
+}
+
+.map-border {
+    fill: #242E47;
+}
+
+.map-province {
+    fill: #364669;
+    transition: fill 0.3s ease;
+}
+
+    .map-province:hover {
+        fill: #CA466B;
+    }
+
+.map-sea {
+    fill: #158690;
+}
+
+.map-island {
+    fill: #364669;
+}
+
+.map-sea-names {
+    fill: #D4DBE5;
+}
+
+.map-province-names {
+    fill: #D4DBE5;
+}
+
+.chartlayout {
+    padding: 10px !important;
+}
+#div_top_twitter {display:none;}

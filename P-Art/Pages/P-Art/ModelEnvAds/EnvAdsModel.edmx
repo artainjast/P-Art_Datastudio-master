@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_EnvAdsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="AddressTypes">
+          <Key>
+            <PropertyRef Name="AddressTypeId" />
+          </Key>
+          <Property Name="AddressTypeId" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Advertises">
+          <Key>
+            <PropertyRef Name="AdvertiseId" />
+          </Key>
+          <Property Name="AdvertiseId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandId" Type="int" />
+          <Property Name="CampainId" Type="int" />
+          <Property Name="StructureId" Type="int" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="FarsiDateTimeIndex" Type="bigint" />
+          <Property Name="EnDateTime" Type="datetime" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="EditDateTime" Type="datetime" />
+          <Property Name="FarsiDateString" Type="nvarchar" MaxLength="50" />
+          <Property Name="EndFarsiDateTimeIndex" Type="bigint" />
+          <Property Name="EndEnDateTime" Type="datetime" />
+          <Property Name="TimeString" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsFinished" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Brands">
+          <Key>
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="BrandId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="BrandImageName" Type="nvarchar" MaxLength="300" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="PanelId" Type="int" />
+        </EntityType>
+        <EntityType Name="Campains">
+          <Key>
+            <PropertyRef Name="CampainId" />
+          </Key>
+          <Property Name="CampainId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandId" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="600" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProvinceId" Type="int" />
+          <Property Name="ProvinceName" Type="nvarchar" MaxLength="500" />
+          <Property Name="CityName" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Competitors">
+          <Key>
+            <PropertyRef Name="CompetitorBrandId" />
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="CompetitorBrandId" Type="int" Nullable="false" />
+          <Property Name="BrandId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="ImageId" />
+          </Key>
+          <Property Name="ImageId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImageName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AdvertiseId" Type="bigint" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="FarsiDateTimeIndex" Type="bigint" />
+          <Property Name="EnDateTime" Type="datetime" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="EditDateTime" Type="datetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="FarsiDateString" Type="nvarchar" MaxLength="50" />
+          <Property Name="TimeString" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusId" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Statuses">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="StatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Structures">
+          <Key>
+            <PropertyRef Name="StructureId" />
+          </Key>
+          <Property Name="StructureId" Type="int" Nullable="false" />
+          <Property Name="StructureTypeId" Type="int" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="AddressTypeId" Type="int" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Area" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="UserId" Type="int" />
+        </EntityType>
+        <EntityType Name="StructureTypes">
+          <Key>
+            <PropertyRef Name="StructureTypeId" />
+          </Key>
+          <Property Name="StructureTypeId" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Advertises_Brands">
+          <End Role="Brands" Type="Self.Brands" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertises" Type="Self.Advertises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Advertises">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Advertises_Structures">
+          <End Role="Structures" Type="Self.Structures" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertises" Type="Self.Advertises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structures">
+              <PropertyRef Name="StructureId" />
+            </Principal>
+            <Dependent Role="Advertises">
+              <PropertyRef Name="StructureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Campains_Brands">
+          <End Role="Brands" Type="Self.Brands" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Campains" Type="Self.Campains" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Campains">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Competitors_Brands">
+          <End Role="Brands" Type="Self.Brands" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Competitors" Type="Self.Competitors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Competitors">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Images_Advertises">
+          <End Role="Advertises" Type="Self.Advertises" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Images" Type="Self.Images" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Advertises">
+              <PropertyRef Name="AdvertiseId" />
+            </Principal>
+            <Dependent Role="Images">
+              <PropertyRef Name="AdvertiseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Structures_AddressTypes">
+          <End Role="AddressTypes" Type="Self.AddressTypes" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Structures" Type="Self.Structures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressTypes">
+              <PropertyRef Name="AddressTypeId" />
+            </Principal>
+            <Dependent Role="Structures">
+              <PropertyRef Name="AddressTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Structures_Cities">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Structures" Type="Self.Structures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="Structures">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Structures_StructureTypes">
+          <End Role="StructureTypes" Type="Self.StructureTypes" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Structures" Type="Self.Structures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StructureTypes">
+              <PropertyRef Name="StructureTypeId" />
+            </Principal>
+            <Dependent Role="Structures">
+              <PropertyRef Name="StructureTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_EnvAdsModelStoreContainer">
+          <EntitySet Name="AddressTypes" EntityType="Self.AddressTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Advertises" EntityType="Self.Advertises" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Brands" EntityType="Self.Brands" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Campains" EntityType="Self.Campains" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Competitors" EntityType="Self.Competitors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Structures" EntityType="Self.Structures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StructureTypes" EntityType="Self.StructureTypes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Advertises_Brands" Association="Self.FK_Advertises_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Advertises" EntitySet="Advertises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Advertises_Structures" Association="Self.FK_Advertises_Structures">
+            <End Role="Structures" EntitySet="Structures" />
+            <End Role="Advertises" EntitySet="Advertises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Campains_Brands" Association="Self.FK_Campains_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Campains" EntitySet="Campains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Competitors_Brands" Association="Self.FK_Competitors_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Competitors" EntitySet="Competitors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Images_Advertises" Association="Self.FK_Images_Advertises">
+            <End Role="Advertises" EntitySet="Advertises" />
+            <End Role="Images" EntitySet="Images" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Structures_AddressTypes" Association="Self.FK_Structures_AddressTypes">
+            <End Role="AddressTypes" EntitySet="AddressTypes" />
+            <End Role="Structures" EntitySet="Structures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Structures_Cities" Association="Self.FK_Structures_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Structures" EntitySet="Structures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Structures_StructureTypes" Association="Self.FK_Structures_StructureTypes">
+            <End Role="StructureTypes" EntitySet="StructureTypes" />
+            <End Role="Structures" EntitySet="Structures" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_EnvAdsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DB_EnvAdsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AddressTypes" EntityType="DB_EnvAdsModel.AddressTypes" />
+          <EntitySet Name="Advertises" EntityType="DB_EnvAdsModel.Advertises" />
+          <EntitySet Name="Brands" EntityType="DB_EnvAdsModel.Brands" />
+          <EntitySet Name="Campains" EntityType="DB_EnvAdsModel.Campains" />
+          <EntitySet Name="Cities" EntityType="DB_EnvAdsModel.Cities" />
+          <EntitySet Name="Competitors" EntityType="DB_EnvAdsModel.Competitors" />
+          <EntitySet Name="Images" EntityType="DB_EnvAdsModel.Images" />
+          <EntitySet Name="Statuses" EntityType="DB_EnvAdsModel.Statuses" />
+          <EntitySet Name="Structures" EntityType="DB_EnvAdsModel.Structures" />
+          <EntitySet Name="StructureTypes" EntityType="DB_EnvAdsModel.StructureTypes" />
+          <AssociationSet Name="FK_Structures_AddressTypes" Association="DB_EnvAdsModel.FK_Structures_AddressTypes">
+            <End Role="AddressTypes" EntitySet="AddressTypes" />
+            <End Role="Structures" EntitySet="Structures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Advertises_Brands" Association="DB_EnvAdsModel.FK_Advertises_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Advertises" EntitySet="Advertises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Advertises_Structures" Association="DB_EnvAdsModel.FK_Advertises_Structures">
+            <End Role="Structures" EntitySet="Structures" />
+            <End Role="Advertises" EntitySet="Advertises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Images_Advertises" Association="DB_EnvAdsModel.FK_Images_Advertises">
+            <End Role="Advertises" EntitySet="Advertises" />
+            <End Role="Images" EntitySet="Images" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Campains_Brands" Association="DB_EnvAdsModel.FK_Campains_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Campains" EntitySet="Campains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Competitors_Brands" Association="DB_EnvAdsModel.FK_Competitors_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Competitors" EntitySet="Competitors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Structures_Cities" Association="DB_EnvAdsModel.FK_Structures_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Structures" EntitySet="Structures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Structures_StructureTypes" Association="DB_EnvAdsModel.FK_Structures_StructureTypes">
+            <End Role="StructureTypes" EntitySet="StructureTypes" />
+            <End Role="Structures" EntitySet="Structures" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AddressTypes">
+          <Key>
+            <PropertyRef Name="AddressTypeId" />
+          </Key>
+          <Property Name="AddressTypeId" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="Structures" Relationship="DB_EnvAdsModel.FK_Structures_AddressTypes" FromRole="AddressTypes" ToRole="Structures" />
+        </EntityType>
+        <EntityType Name="Advertises">
+          <Key>
+            <PropertyRef Name="AdvertiseId" />
+          </Key>
+          <Property Name="AdvertiseId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandId" Type="Int32" />
+          <Property Name="CampainId" Type="Int32" />
+          <Property Name="StructureId" Type="Int32" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="FarsiDateTimeIndex" Type="Int64" />
+          <Property Name="EnDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditDateTime" Type="DateTime" Precision="3" />
+          <Property Name="FarsiDateString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EndFarsiDateTimeIndex" Type="Int64" />
+          <Property Name="EndEnDateTime" Type="DateTime" Precision="3" />
+          <Property Name="TimeString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsFinished" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="Brands" Relationship="DB_EnvAdsModel.FK_Advertises_Brands" FromRole="Advertises" ToRole="Brands" />
+          <NavigationProperty Name="Structures" Relationship="DB_EnvAdsModel.FK_Advertises_Structures" FromRole="Advertises" ToRole="Structures" />
+          <NavigationProperty Name="Images" Relationship="DB_EnvAdsModel.FK_Images_Advertises" FromRole="Advertises" ToRole="Images" />
+        </EntityType>
+        <EntityType Name="Brands">
+          <Key>
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="BrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="BrandImageName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="PanelId" Type="Int32" />
+          <NavigationProperty Name="Advertises" Relationship="DB_EnvAdsModel.FK_Advertises_Brands" FromRole="Brands" ToRole="Advertises" />
+          <NavigationProperty Name="Campains" Relationship="DB_EnvAdsModel.FK_Campains_Brands" FromRole="Brands" ToRole="Campains" />
+          <NavigationProperty Name="Competitors" Relationship="DB_EnvAdsModel.FK_Competitors_Brands" FromRole="Brands" ToRole="Competitors" />
+        </EntityType>
+        <EntityType Name="Campains">
+          <Key>
+            <PropertyRef Name="CampainId" />
+          </Key>
+          <Property Name="CampainId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandId" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Brands" Relationship="DB_EnvAdsModel.FK_Campains_Brands" FromRole="Campains" ToRole="Brands" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProvinceId" Type="Int32" />
+          <Property Name="ProvinceName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CityName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Structures" Relationship="DB_EnvAdsModel.FK_Structures_Cities" FromRole="Cities" ToRole="Structures" />
+        </EntityType>
+        <EntityType Name="Competitors">
+          <Key>
+            <PropertyRef Name="CompetitorBrandId" />
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="CompetitorBrandId" Type="Int32" Nullable="false" />
+          <Property Name="BrandId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Brands" Relationship="DB_EnvAdsModel.FK_Competitors_Brands" FromRole="Competitors" ToRole="Brands" />
+        </EntityType>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="ImageId" />
+          </Key>
+          <Property Name="ImageId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImageName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AdvertiseId" Type="Int64" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="FarsiDateTimeIndex" Type="Int64" />
+          <Property Name="EnDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditDateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FarsiDateString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TimeString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="Advertises" Relationship="DB_EnvAdsModel.FK_Images_Advertises" FromRole="Images" ToRole="Advertises" />
+        </EntityType>
+        <EntityType Name="Statuses">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="StatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Structures">
+          <Key>
+            <PropertyRef Name="StructureId" />
+          </Key>
+          <Property Name="StructureId" Type="Int32" Nullable="false" />
+          <Property Name="StructureTypeId" Type="Int32" />
+          <Property Name="CityId" Type="Int32" />
+          <Property Name="AddressTypeId" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="UserId" Type="Int32" />
+          <NavigationProperty Name="AddressTypes" Relationship="DB_EnvAdsModel.FK_Structures_AddressTypes" FromRole="Structures" ToRole="AddressTypes" />
+          <NavigationProperty Name="Advertises" Relationship="DB_EnvAdsModel.FK_Advertises_Structures" FromRole="Structures" ToRole="Advertises" />
+          <NavigationProperty Name="Cities" Relationship="DB_EnvAdsModel.FK_Structures_Cities" FromRole="Structures" ToRole="Cities" />
+          <NavigationProperty Name="StructureTypes" Relationship="DB_EnvAdsModel.FK_Structures_StructureTypes" FromRole="Structures" ToRole="StructureTypes" />
+        </EntityType>
+        <EntityType Name="StructureTypes">
+          <Key>
+            <PropertyRef Name="StructureTypeId" />
+          </Key>
+          <Property Name="StructureTypeId" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="Structures" Relationship="DB_EnvAdsModel.FK_Structures_StructureTypes" FromRole="StructureTypes" ToRole="Structures" />
+        </EntityType>
+        <Association Name="FK_Structures_AddressTypes">
+          <End Type="DB_EnvAdsModel.AddressTypes" Role="AddressTypes" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Structures" Role="Structures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressTypes">
+              <PropertyRef Name="AddressTypeId" />
+            </Principal>
+            <Dependent Role="Structures">
+              <PropertyRef Name="AddressTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Advertises_Brands">
+          <End Type="DB_EnvAdsModel.Brands" Role="Brands" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Advertises" Role="Advertises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Advertises">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Advertises_Structures">
+          <End Type="DB_EnvAdsModel.Structures" Role="Structures" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Advertises" Role="Advertises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structures">
+              <PropertyRef Name="StructureId" />
+            </Principal>
+            <Dependent Role="Advertises">
+              <PropertyRef Name="StructureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Images_Advertises">
+          <End Type="DB_EnvAdsModel.Advertises" Role="Advertises" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Images" Role="Images" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Advertises">
+              <PropertyRef Name="AdvertiseId" />
+            </Principal>
+            <Dependent Role="Images">
+              <PropertyRef Name="AdvertiseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Campains_Brands">
+          <End Type="DB_EnvAdsModel.Brands" Role="Brands" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Campains" Role="Campains" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Campains">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Competitors_Brands">
+          <End Type="DB_EnvAdsModel.Brands" Role="Brands" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Competitors" Role="Competitors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Competitors">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Structures_Cities">
+          <End Type="DB_EnvAdsModel.Cities" Role="Cities" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Structures" Role="Structures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="Structures">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Structures_StructureTypes">
+          <End Type="DB_EnvAdsModel.StructureTypes" Role="StructureTypes" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DB_EnvAdsModel.Structures" Role="Structures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StructureTypes">
+              <PropertyRef Name="StructureTypeId" />
+            </Principal>
+            <Dependent Role="Structures">
+              <PropertyRef Name="StructureTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_EnvAdsModelStoreContainer" CdmEntityContainer="DB_EnvAdsEntities">
+          <EntitySetMapping Name="AddressTypes">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.AddressTypes">
+              <MappingFragment StoreEntitySet="AddressTypes">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Advertises">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Advertises">
+              <MappingFragment StoreEntitySet="Advertises">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+                <ScalarProperty Name="TimeString" ColumnName="TimeString" />
+                <ScalarProperty Name="EndEnDateTime" ColumnName="EndEnDateTime" />
+                <ScalarProperty Name="EndFarsiDateTimeIndex" ColumnName="EndFarsiDateTimeIndex" />
+                <ScalarProperty Name="FarsiDateString" ColumnName="FarsiDateString" />
+                <ScalarProperty Name="EditDateTime" ColumnName="EditDateTime" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="EnDateTime" ColumnName="EnDateTime" />
+                <ScalarProperty Name="FarsiDateTimeIndex" ColumnName="FarsiDateTimeIndex" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="StructureId" ColumnName="StructureId" />
+                <ScalarProperty Name="CampainId" ColumnName="CampainId" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="AdvertiseId" ColumnName="AdvertiseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Brands">
+              <MappingFragment StoreEntitySet="Brands">
+                <ScalarProperty Name="PanelId" ColumnName="PanelId" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="BrandImageName" ColumnName="BrandImageName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Campains">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Campains">
+              <MappingFragment StoreEntitySet="Campains">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="CampainId" ColumnName="CampainId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Cities">
+              <MappingFragment StoreEntitySet="Cities">
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+                <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Competitors">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Competitors">
+              <MappingFragment StoreEntitySet="Competitors">
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="CompetitorBrandId" ColumnName="CompetitorBrandId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Images">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="TimeString" ColumnName="TimeString" />
+                <ScalarProperty Name="FarsiDateString" ColumnName="FarsiDateString" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EditDateTime" ColumnName="EditDateTime" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="EnDateTime" ColumnName="EnDateTime" />
+                <ScalarProperty Name="FarsiDateTimeIndex" ColumnName="FarsiDateTimeIndex" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="AdvertiseId" ColumnName="AdvertiseId" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Statuses">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Statuses">
+              <MappingFragment StoreEntitySet="Statuses">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Structures">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.Structures">
+              <MappingFragment StoreEntitySet="Structures">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="StructureTypeId" ColumnName="StructureTypeId" />
+                <ScalarProperty Name="StructureId" ColumnName="StructureId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StructureTypes">
+            <EntityTypeMapping TypeName="DB_EnvAdsModel.StructureTypes">
+              <MappingFragment StoreEntitySet="StructureTypes">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="StructureTypeId" ColumnName="StructureTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
