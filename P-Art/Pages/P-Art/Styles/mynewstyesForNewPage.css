@@ -64,9 +64,20 @@
 }
 
 
+.secondnewoneclass {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 110%;
+}
 
+.mytopbarfornavigat-left {
+ 
+    width: 110%;
+    border-radius: 5px;
+    padding: 15px;
+}
 
-.mytopbarfornavigat-left{
-    background-color:#FFFFFF;
-    
+.Mydisplayerflex {
+    display:flex;
+    flex-direction:row ;
 }

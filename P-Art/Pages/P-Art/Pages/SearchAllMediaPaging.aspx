@@ -7,7 +7,7 @@
         type="text/javascript"></script>
     <script src='<%= ResolveUrl("~/Pages/P-Art/Scripts/Calender/jquery.ui.datepicker-cc-fa.js")%>'
         type="text/javascript"></script>
-
+    <link href="../Styles/mynewstyesForNewPage1.css" />
     <link href="/Pages/P-Art/Scripts/jquery.qtip.css" rel="stylesheet" />
     <link href="../Styles/mynewstyesForNewPage.css" rel="stylesheet" />
 
@@ -34,7 +34,7 @@
 
                 </div> 
                 <div class="aaaa">
-                    <input type="checkbox" id="TelegramCheckBox" runat="server" class="CheckBox" />
+                    <input type="checkbox" id="TelegramCheckBox" runat="server" class="CheckBox"  />
                     <label for="TelegramCheckBox" class="MediaCheckBoxLabel myboxlable">تلگرام</label>
                     <svg class="FiterIcons" xmlns="http://www.w3.org/2000/svg" width="42.921" height="35.769" viewBox="0 0 42.921 35.769">
                       <path id="telegram" d="M16.842,25.574l-.71,9.987a2.482,2.482,0,0,0,1.983-.96l4.763-4.552,9.869,7.227c1.81,1.009,3.085.478,3.573-1.665L42.8,5.257l0,0c.574-2.675-.968-3.722-2.731-3.065L1.992,16.767c-2.6,1.009-2.559,2.457-.442,3.114l9.734,3.028L33.9,8.761c1.064-.7,2.032-.315,1.236.39Z" transform="translate(0 -2)" fill="#505050"/>
@@ -89,36 +89,44 @@
             </div>
           </div>  
         </div>
-        <div class="mytopbarfornavigat-left">
-            <span>
-                <span>از تاریخ</span>
-                <asp:TextBox ID="txt_fromDate" runat="server" CssClass="textbox" Style="width: 68px;" />
-            </span>
-            <span>
-                <span>از ساعت</span>
-                <asp:TextBox ID="txt_fromHour" runat="server" CssClass="textbox" placeholder="  :  " Style="width: 25px; text-align: center" />
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                    ErrorMessage="00:00" ForeColor="Red" Display="Dynamic" ControlToValidate="txt_fromHour"
-                    ValidationExpression="^(([0-1][0-9])|([2][0-3])):([0-5][0-9])$">
-                </asp:RegularExpressionValidator>
-            </span>
-            <span>
-                <span>تا تاریخ</span>
-                <asp:TextBox ID="txt_toDate" runat="server" CssClass="textbox" Style="width: 68px;" />
-            </span>
-            <span>
-                <span>تا ساعت</span>
-                <asp:TextBox ID="txt_toHour" runat="server" CssClass="textbox" placeholder="  :  " Style="width: 25px; text-align: center" />
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
-                    ErrorMessage="23:00" ForeColor="Red" Display="Dynamic" ControlToValidate="txt_toHour"
-                    ValidationExpression="^(([0-1][0-9])|([2][0-3])):([0-5][0-9])$">
-                </asp:RegularExpressionValidator>
-            </span>
-       
-            <span>
-                <span>کلید واژه</span>
-                <asp:TextBox ID="txt_search" runat="server" CssClass="textbox" Width="200" />
-            </span>
+        <div class="mytopbarfornavigat-left secondnewoneclass">
+              <div class="Mydisplayerflex">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                  <image id="loupe" width="24" height="24" xlink:href="data:image/png;base64,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"/>
+                </svg>
+                <asp:TextBox ID="txt_search" runat="server" CssClass="textbox" Width="200"  placeholder="برای جستجو کلید واژه مورد نظر خود را وارد کنید"/>
+            </div>
+            <div class="Mydisplayerflex">
+                <div>
+                    <span>
+                        <span>از تاریخ</span>
+                        <asp:TextBox ID="txt_fromDate" runat="server" CssClass="textbox" Style="width: 68px;" />
+                    </span>
+                    <span>
+                        <span>از ساعت</span>
+                        <asp:TextBox ID="txt_fromHour" runat="server" CssClass="textbox" placeholder="  :  " Style="width: 25px; text-align: center" />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ErrorMessage="00:00" ForeColor="Red" Display="Dynamic" ControlToValidate="txt_fromHour"
+                            ValidationExpression="^(([0-1][0-9])|([2][0-3])):([0-5][0-9])$">
+                        </asp:RegularExpressionValidator>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <span>تا تاریخ</span>
+                        <asp:TextBox ID="txt_toDate" runat="server" CssClass="textbox" Style="width: 68px;" />
+                    </span>
+                    <span>
+                        <span>تا ساعت</span>
+                        <asp:TextBox ID="txt_toHour" runat="server" CssClass="textbox" placeholder="  :  " Style="width: 25px; text-align: center" />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ErrorMessage="23:00" ForeColor="Red" Display="Dynamic" ControlToValidate="txt_toHour"
+                            ValidationExpression="^(([0-1][0-9])|([2][0-3])):([0-5][0-9])$">
+                        </asp:RegularExpressionValidator>
+                    </span>
+                </div>
+            </div>
+          
             <span>
                 <label for="PageSizeDropDownList">تعداد در صفحه  </label>
 

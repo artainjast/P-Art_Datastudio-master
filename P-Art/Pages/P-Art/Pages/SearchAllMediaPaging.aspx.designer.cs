@@ -78,6 +78,15 @@ namespace P_Art.Pages.P_Art.Pages
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox1;
 
         /// <summary>
+        /// txt_search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_search;
+
+        /// <summary>
         /// txt_fromDate control.
         /// </summary>
         /// <remarks>
@@ -130,15 +139,6 @@ namespace P_Art.Pages.P_Art.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
-
-        /// <summary>
-        /// txt_search control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_search;
 
         /// <summary>
         /// PageSizeDropDownList control.

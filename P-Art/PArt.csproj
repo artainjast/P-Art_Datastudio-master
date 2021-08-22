@@ -2466,6 +2466,7 @@
     <Content Include="Pages\P-Art\Styles\rtlBootstrap\bootstrap-rtl.min.css" />
     <Content Include="Pages\P-Art\Styles\rtlBootstrap\bootstrap.min.css" />
     <Content Include="Pages\P-Art\Styles\SiteMaster.css" />
+    <Content Include="Pages\P-Art\Styles\mynewstyesForNewPage1.css" />
     <Content Include="Pages\P-Art\Styles\StyleV2.css" />
     <Content Include="Pages\P-Art\MasterPages\Landing1.Master" />
     <Content Include="Pages\P-Art\Styles\Bootstrap3.3.7\css\bootstrap-theme.css.map" />
