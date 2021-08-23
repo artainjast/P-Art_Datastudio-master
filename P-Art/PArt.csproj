@@ -182,6 +182,9 @@
     <Content Include="Pages\P-Art\Images\Bulltin-Cover.jpg" />
     <Content Include="Pages\P-Art\Images\Bulltin-Page.jpg" />
     <Content Include="Pages\P-Art\Images\calcpercent.gif" />
+    <Content Include="Pages\P-Art\Images\icons\Rssicon.png" />
+    <Content Include="Pages\P-Art\Images\icons\instagram.png" />
+    <Content Include="Pages\P-Art\Images\icons\telegram.png" />
     <Content Include="Pages\P-Art\Images\ic_logo_datastudio.png" />
     <Content Include="Pages\P-Art\Images\Jch-08-rah.jpg" />
     <Content Include="Pages\P-Art\Images\Jch-08.jpg" />

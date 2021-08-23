@@ -33,15 +33,6 @@ namespace P_Art.Pages.P_Art.Pages
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox NewsCheckBox;
 
         /// <summary>
-        /// TelegramCheckBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox TelegramCheckBox;
-
-        /// <summary>
         /// TwitterCheckBox control.
         /// </summary>
         /// <remarks>
@@ -49,6 +40,15 @@ namespace P_Art.Pages.P_Art.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox TwitterCheckBox;
+
+        /// <summary>
+        /// TelegramCheckBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox TelegramCheckBox;
 
         /// <summary>
         /// InstagramCheckBox control.

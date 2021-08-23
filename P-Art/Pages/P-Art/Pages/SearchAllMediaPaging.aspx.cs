@@ -285,6 +285,7 @@ namespace P_Art.Pages.P_Art.Pages
 
                         tempPagingItems.AddRange(queryNewsTable.Select(n => new PagingSearchAllMediaItem_Type
                         {
+                            
                             Id = n.NewsID,
                             Date = n.NewsDate,
                             DateTimeIndex = n.NewsDateTimeIndex ?? 0,
@@ -297,8 +298,9 @@ namespace P_Art.Pages.P_Art.Pages
                             Time = n.NewsTime,
                             Title = n.NewsTitle,
                             OrginalUrl = n.NewsLink,
+                            MediaPicture = n.NewsPicture
 
-                        }).ToList());
+                        }).ToList()); 
                     }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
                     catch (Exception ex)
@@ -334,6 +336,7 @@ namespace P_Art.Pages.P_Art.Pages
                             Time = n.Time,
                             Title = n.Text,
                             OrginalUrl = n.Url,
+                            MediaPicture = ""
 
                         }).ToList());
                     }
@@ -373,6 +376,7 @@ namespace P_Art.Pages.P_Art.Pages
                             ReferenceTitle = n.FullName ?? n.UserName,
                             Title = n.CaptionText,
                             OrginalUrl = n.PostUrl,
+                            MediaPicture = n.DisplayUrl
 
 
                         }).ToList());
@@ -412,6 +416,7 @@ namespace P_Art.Pages.P_Art.Pages
                             ReferenceTitle = "",
                             Time = n.MessageTime,
                             Title = n.MessageText,
+                            MediaPicture = ""
 
 
                         }).ToList());
@@ -459,7 +464,8 @@ namespace P_Art.Pages.P_Art.Pages
                             Time = n.PlayTime,
                             Title = n.Title,
                             OrginalUrlVisibility = "hide",
-                            PanelUrlVisibility = "hide"
+                            PanelUrlVisibility = "hide",
+                            MediaPicture = n.PosterPath
                         }).ToList());
 
                         foreach (var item in tempPagingItems.Where(m => m.MediaTypeId == 5))
@@ -836,7 +842,7 @@ namespace P_Art.Pages.P_Art.Pages
 
             PaginationHTML.AppendLine("</div>");
             PaginationHTML.AppendLine($"<span class=\"PagingTotalCount\">صفحه {index} از {tab} </span>");
-            PaginationHTML.AppendLine($"<span class=\"PagingTotalCount\">تعداد اخبار: {totalCount}  </span>");
+            PaginationHTML.AppendLine($"<span class=\"PagingTotalCount\"> مجموع محتوا :  {totalCount}  </span>");
 
             topPagination.InnerHtml = PaginationHTML.ToString();
             buttomPagination.InnerHtml = PaginationHTML.ToString();
@@ -1101,16 +1107,15 @@ namespace P_Art.Pages.P_Art.Pages
             switch (MediaTypeId)
             {
                 case 1:
-                    return "<i class=\"far fa-newspaper fa-lg Purple\"></i>";
-                case 2:
-                    return "<i class=\"fab fa-twitter fa-lg twitterBlue\"></i>";
+                    return "<img src='/Pages/P-Art/Images/icons/Rssicon.png' />";
+                    
                 case 3:
-                    return "<i class=\"fab fa-instagram fa-lg instagramMaroon\"></i>";
+                    return "<img src='/Pages/P-Art/Images/icons/instagram.png' />";
                 case 4:
-                    return "<i class=\"fab fa-telegram fa-lg telegramBlue\"></i>";
+                    return "<img src='/Pages/P-Art/Images/icons/telegram.png' />";
                 case 5:
-                    return "<i class=\"far fa-play-circle fa-lg orange\"></i>";
-                default:
+                    return "<img src='/Pages/P-Art/Images/icons/Rssicon.png' />";
+                default: 
                     return "";
             }
         }

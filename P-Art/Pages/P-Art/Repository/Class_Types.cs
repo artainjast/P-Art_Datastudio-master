@@ -702,6 +702,7 @@ namespace PArt.Pages.P_Art.Repository
         public string PanelUrlVisibility { get; set; }
         public string OrginalUrl { get; set; }
         public string OrginalUrlVisibility { get; set; }
+        public string MediaPicture { get; set; }
     }
 
 
